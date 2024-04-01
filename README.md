@@ -86,6 +86,7 @@ The authors demonstrated SuperAgent, an add-on web browser extension customer se
 **Citations:** 269
 
 **Read by:** Noppawee Teeraratchanon
+
 This paper is about Question Classification to classify the questions and narrow down the search space to identify the correct answer. They used 2 models to compare which are `LIBSVM` and `Stanford Maximum Entropy`. Moreover, they used 5 different features to deal with questions including:
 1.	Question wh-word: to separate the question into what, which, when, where, who, how, why, and rest type.
 2.	Heas words: to focus on identifying the single word that carries the most meaning or significance Instead of considering the entire question.
@@ -108,6 +109,7 @@ To evaluate, First, the paper tests SVM and ME models with individual features. 
 **Citations:** 232
 
 **Read by:** Noppawee Teeraratchanon
+
 The paper is about a chatbot called AliMe Chat that's really good at answering questions and having conversations. It introduced a new method for improving chatbots by combining 3 models including:
 1.	Information Retrieval (IR) model is used for retrieving the number of sets of candidate QA pairs from the database that has the top similarity score between the input question and the retrieved question calculated by BM25.
 2.	Rerank model (Seq2Seq) is used for calculating the confidence score between the input question and all candidate answers and selecting the answer that has the highest score. If the score is higher than the threshold, the chatbot takes the answer.
