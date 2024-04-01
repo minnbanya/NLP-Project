@@ -116,3 +116,36 @@ The paper is about a chatbot called AliMe Chat that's really good at answering q
 3.	Generation based model (Seq2Seq with GRU) is used for generating the answer from scratch based on context if the score from the Rerank model is lower than the threshold.
 <br>
 By combining 3 models, it handles the limitations of the IR model (struggle with less common questions and difficulty to handle with long-tail questions) and the Seq2Seq based generation model (sometimes gives inconsistent or nonsensical answers). Moreover, the paper compared IR, Generation, IR + Rerank, and IR + Rerank + Generation. They concluded that IR + Rerank + Generation got the highest accuracy.
+
+## 7. Bot2Vec: Learning Representations of Chatbots
+
+**Authors:** Jonathan Herzig, Tommy Sandbank, Michal Shmueli-Scheuer
+David Konopnicki1 John Richards
+
+**Link:** https://aclanthology.org/S19-1009.pdf
+
+**Year:** 2019
+
+**Citations:** 1
+
+**Read by:** Kyi Thin Nu
+
+BOT2VEC is a framework for learning vector representations of conversational bots using neural networks. The framework offers two approaches: content-based (BOT2VEC-C) and structure-based (BOT2VEC-S) representations. Conversations are represented either by textual content or by analyzing the structure of bot graphs. The framework is evaluated on two classification tasks: detecting production bots and identifying egregious conversations. Experimental results demonstrate the effectiveness of BOT2VEC representations in improving classification performance compared to baseline models. Additionally, the analysis reveals semantic similarities between bots within the same domain based on their structure representations.
+
+Keywords: Conversational Bots, Representation Learning, BOT2VEC, Neural Networks, Classification Tasks, GitHub Repository.
+
+## 8. Conversational Recommender System and Large Language Model Are Made for Each Other in E-commerce Pre-sales Dialogue
+
+**Authors:** Yuanxing Liu, Weinan Zhang, Yifan Chen, Yuchi Zhang, Haopeng Bai, Fan Feng, Hengbin Cui, Yongbin Li, Wanxiang Che
+
+**Link:** https://aclanthology.org/2023.findings-emnlp.643/
+
+**Year:** 2023
+
+**Citations:** 106
+
+**Read by:** Kyi Thin Nu
+
+This paper explores the synergistic integration of Conversational Recommender Systems (CRS) and Large Language Models (LLMs) in e-commerce pre-sales dialogues. By combining CRS, which suggest products based on user preferences, with LLMs, capable of generating human-like responses, the system aims to enhance the shopping experience. The study investigates how the joint utilization of these technologies improves recommendation accuracy and user satisfaction. Experimental results demonstrate the effectiveness of the integrated approach in facilitating meaningful and personalized interactions between users and e-commerce platforms, leading to increased engagement and conversion rates.
+
+Keywords: Conversational Recommender System, Large Language Model, E-commerce, Pre-sales Dialogue, Personalization, User Engagement.
