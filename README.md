@@ -226,6 +226,82 @@ This paper explores the synergistic integration of Conversational Recommender Sy
 
 Keywords: Conversational Recommender System, Large Language Model, E-commerce, Pre-sales Dialogue, Personalization, User Engagement.
 
+## 9. CHAI: A CHatbot AI for Task-Oriented Dialogue with Offline Reinforcement Learning
+
+**Authors:** Siddharth Verma, Justin Fu, Mengjiao Yang, Sergey Levine
+
+**Link:** https://aclanthology.org/2022.naacl-main.332.pdf
+
+**Year:** 2022
+
+**Citations:** 30
+
+**Read by:** Wut Yee Aung
+
+This paper study how offline reinforcement learning can instead be used to train dialogue agents entirely using static datasets collected from human speakers. Their experiments show that recently developed offline RL methods can be combined with language models to yield realistic dialogue agents that better accomplish task goals.
+
+**Methodology:**
+
+- Reinforcement Learning Setup:
+    - This study formulate the task-oriented dialogue problem as an RL problem, where the agent serves the role of seller and the environment serves the role as the buyer. It utilizes offline RL, which leverages pre-collected datasets of human conversations.
+    - The problem is defined as a Markov decision process, with states, actions, transition distribution, and reward function.
+        - States (**S**) include information like action type, utterance content, normalized price related to list price, and context like ad description.
+        - Actions (**A**) involve sending messages or offers with proposed prices.
+        - Transition Function (**T**) determines how likely different responses are after each action taken by our seller bot.
+        - Reward Function (**R**) : Chatbot receives rewards based on how well it negotiates:
+            - If it sells an item, it gets points proportional to the selling price (normalized against list price and multiplied by ten).
+            - If its offer gets rejected, it loses points (a penalty of -20) to push it toward making successful deals.
+    - The RL objective is to find a policy that maximizes the expected returns over time. It can be done either through online RL (interacting with the environment) or offline RL (using pre-collected interactions).
+- Offline Reinforcement Learning with Language Models:
+    - Proposed approach combines offline RL with fine-tuned language models.
+    - The approached begins with training a language model, such as GPT-2 and fine-tuning it on task-specific dialogue corpus.
+    - Then train a critic or Q-function which is responsible for scoring good and bad responses and is used to select responses from a pool of candidates generated from the language model. Implement 3 Q-learning framework for training and compare.
+        - Proposal Sampling (CHAI-prop)
+        - Conservative Q-Learning (CHAI-CQL)
+        - Behavior-Regularized Q-Learning (CHAI-BRAC)
+- Dialogue Generation from trained Q-function:
+    - Finetuned language model is used to generate candidate responses conditioned on the conversation history, along with sampled prices.
+    - Each action is scored using a critic.
+    - Final response is returned by sampling the Q-value scores.
+
+**Dataset and Evaluation:**
+- CraigslistBargain dataset which consists of real dialogues between buyers and sellers on Craigslist.
+- CHAI is evaluated on a negotiation scenario using this dataset.
+- The seller role is played by CHAI, while the buyer is simulated by the environment.
+
+## 10. SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues
+
+**Authors:** Ssu Chiu,  Maolin Li, Yen-Ting Lin, Yun-Nung Chen
+
+**Link:** https://aclanthology.org/2022.acl-long.425.pdf
+
+**Year:** 2022
+
+**Citations:** 25
+
+**Read by:** Wut Yee Aung
+
+This paper focuses on investigating the conversations starting from open-domain social chatting and then gradually transitioning to task oriented purposes, and releases a large-scale dataset with detailed annotations for encouraging this research direction. To achieve this goal, this paper proposes a framework to automatically generate many dialogues without human involvement, in which any powerful opendomain dialogue generation model can be easily leveraged.
+
+**Background:** Existing dialogue systems are usually categorized into two types: 
+- Open-domain : focus on free chatting with users and are not able to complete tasks as human assistants.
+- Task-oriented : is designed to complete the users’ goals.
+- These two types have been studied separately till these study has released.
+
+**Proposed Approach:** proposed approach introduces SalesBot as a new framework that generates data transitioning from open-domain chit-chats to task-oriented dialogues. This framework consists of 
+- Open-Domain Dialogue Generation
+    - use BlenderBot as pre-trained generation model open-domain conversations
+    - use ParlAI2 software to create two BlenderBots with different personas to generate conversations which cover a wide range of topics.
+- Chit-Chat to Task-Oriented Transition : focus on capturing the suitable timing and deciding how to smoothly transition to the target task respectively
+    - Task-oriented intent detector to find out the good timing when someone might be interested in the product based on their conversation.
+    - Transition turn generator focuses on smoothly switching from casual conversation to talking about the product.
+- Task-Oriented Dialogue Generation : generating the conversation after the salesperson has transitioned from chit-chat to talking about the product.
+    - Merge SGD: merge appropriate task-oriented dialogue from TOD with a chit-chat dialogue.
+    - Task-Oriented Simulation: creates a new conversation from scratch. They train two different AI models, one for the customer and one for the salesperson. These models can have an open-ended conversation until they reach a stopping point.
+
+**Results and Analysis:** The researchers evaluated their generated dialogues using human judges. The results showed the system could produce natural conversations relevant to the initial chat and transition smoothly to sales talk without being overly aggressive. Two methods for generating the sales conversation (Merge SGD and TOD Generation) showed similar performance while one underperformed due to the complexity of detecting implicit intents in chit-chat conversations.
+
+
 ## Acknowledgments
 
 We extend our heartfelt gratitude to our dedicated team for their unwavering support and guidance throughout the project. Their invaluable contributions have been instrumental in the development and testing of this project. We would also like to express our special thanks to Minn, Wut Yee, Kyi, Puay and Nopawee for their exceptional efforts and commitment to ensuring the success of this endeavor.
