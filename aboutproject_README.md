@@ -1,5 +1,7 @@
 # NLP Project - Sales Chatbot for Amazon
-## About our team
+
+## Introduction to our team
+Allow us to introduce the exceptional individuals who form the backbone of our project team:
 - Minn Banya                (st124145)
 - Wut Yee Aung              (st124377)
 - Kyi Thin Nu               (st124087)
