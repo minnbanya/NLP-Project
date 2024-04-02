@@ -55,7 +55,7 @@ Addressing these challenges is imperative to bridge the gap in customer service 
 - Web Design
     - Flask as backend framework to handle interaction between user requests and model responses
     - HTML as frontend framework for the user interface.
-    - MLflow for managing machine learning models including experiment tracking, model versioning, model serving, and a central model store.
+    - MLflow for managing machine learning models including experiment tracking, model versioning, and model serving.
     - GitHub will manage codebase changes while also tracking modifications in application code changes.
 
 ## Dataset Information
