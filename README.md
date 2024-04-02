@@ -269,6 +269,13 @@ This paper study how offline reinforcement learning can instead be used to train
 - CHAI is evaluated on a negotiation scenario using this dataset.
 - The seller role is played by CHAI, while the buyer is simulated by the environment.
 
+**Results and Analysis**
+
+- CHAI combines the strengths of two techniques:
+    - Offline Reinforcement Learning (RL): allows CHAI to learn from pre-collected datasets of human conversations, making it efficient and avoiding the need for real-time interaction.
+    - Language Models (LMs): This enables CHAI to generate natural and grammatically correct language during conversations.
+- CHAI gives both descriptive responses to questions and reasonable bargaining behavior, whereas the retrieval-based agent only shows good bargaining behavior, and the language model agent only gives descriptive responses.
+
 ## 10. SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues
 
 **Authors:** Ssu Chiu,  Maolin Li, Yen-Ting Lin, Yun-Nung Chen
