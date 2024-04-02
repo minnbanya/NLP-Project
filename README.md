@@ -58,8 +58,10 @@ Addressing these challenges is imperative to bridge the gap in customer service 
 
 ## Dataset Information
 
-We will use the dataset from ---- and
-write proper credit here
+We will use the dataset from:
+- Amazon product dataset (small) - https://www.kaggle.com/datasets/promptcloud/amazon-product-dataset-2020
+- Amazon product dataset (large) - https://www.kaggle.com/datasets/piyushjain16/amazon-product-data/data
+- Amazon QA dataset - https://cseweb.ucsd.edu/~jmcauley/datasets/amazon/qa/ 
 
 # Paper Summaries: 
 
@@ -76,7 +78,7 @@ Jane Dwivedi-Yu, Yiming Yang, Jamie Callan, Graham Neubig
 
 **Read by:** Minn Banya
 
-FLARE (Forward-Looking Active Retrieval augmented generation) introduces an innovative method for text generation by utilizing forward prediction of upcoming sentences to retrieve relevant documents for sentence regeneration. It compares direct retrieval, based on confidence levels, with instructed retrieval, favoring the former for its superior performance. Optimal confidence values for retrieval range between 40% and 80%. Additionally, masking low-probability tokens during direct retrieval using a threshold value, beta, proves more effective than retrieving entire sentences. FLARE shows promise in enhancing text generation tasks through the integration of active retrieval mechanisms.
+FLARE (Forward-Looking Active Retrieval augmented generation) presents a novel approach to text generation by leveraging forward prediction to anticipate upcoming sentences and retrieve pertinent documents for sentence generation. It conducts a comparative analysis between direct retrieval, based on confidence levels, and instructed retrieval, with direct retrieval showing superior performance. The study identifies optimal confidence values for retrieval falling within the range of 40% to 80%. Furthermore, the technique of masking low-probability tokens during direct retrieval using a threshold value, beta, is demonstrated to be more effective than retrieving entire sentences. Overall, FLARE demonstrates considerable potential in enhancing text generation tasks through the incorporation of active retrieval mechanisms, offering a nuanced understanding of the interplay between forward prediction and document retrieval in the generation process.
 
 ## 2. Lingke: A Fine-grained Multi-turn Chatbot for Customer Service
 
