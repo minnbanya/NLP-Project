@@ -1,10 +1,10 @@
 # NLP Project - Sales Chatbot for Amazon
 ## About our team
-- Minn Banya                (st124)
-- Wut Yee Aung
-- Kyi Thin Nu
-- Thamakorn Kiattikaikul
-- Noppawee Teeraratchanon
+- Minn Banya                (st124145)
+- Wut Yee Aung              (st124377)
+- Kyi Thin Nu               (st124087)
+- Thamakorn Kiattikaikul    (st124481)
+- Noppawee Teeraratchanon   (st124482)
 
 ## Our Paper Presentation
 Please refer to this link [https://github.com/minnbanya/NLP-Project/blob/main/README.md]
