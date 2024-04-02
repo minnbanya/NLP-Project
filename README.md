@@ -53,8 +53,10 @@ Addressing these challenges is imperative to bridge the gap in customer service 
         - Instruction tuning tested and included if there is a positive impact on the performance
 - Design test cases and evaluations for the system’s performance
 - Web Design
-    - Frontend: User interface for interacting with the chatbot, possibly through a website or messaging platform.
-    - will update according to Ma Wut Yee
+    - Flask as backend framework to handle interaction between user requests and model responses
+    - HTML as frontend framework for the user interface.
+    - MLflow for managing machine learning models including experiment tracking, model versioning, model serving, and a central model store.
+    - GitHub will manage codebase changes while also tracking modifications in application code changes.
 
 ## Dataset Information
 
