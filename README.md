@@ -65,7 +65,14 @@ We will use the dataset from:
 
 We acknowledge and appreciate the creators and contributors of the dataset for making it available for public use.
 
-
+## Task Distribution
+- Data Collection  - Puay and Kyi
+- Modeling	
+    - Classification - Nopawee
+    - Language Model - Minn
+- Web Application - Wut Yee
+- Experiment Testing - Puay and Kyi
+- Reporting	and Others - Puay and Kyi
 
 # Paper Summaries: 
 
