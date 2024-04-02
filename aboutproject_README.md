@@ -9,7 +9,8 @@ Allow us to introduce the exceptional individuals who form the backbone of our p
 - Noppawee Teeraratchanon   (st124482)
 
 ## Our Paper Presentation
-Please refer to this link [https://github.com/minnbanya/NLP-Project/blob/main/README.md]
+To access the paper summaries of our team, please follow the link provided below:  
+[https://github.com/minnbanya/NLP-Project/blob/main/README.md]
 
 ## Project Background: The Rise of Sales Chatbots for Amazon
 
