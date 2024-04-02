@@ -62,8 +62,21 @@ Addressing these challenges is imperative to bridge the gap in customer service 
 
 ## Dataset Information
 
-We will use the dataset from ---- and
-write proper credit here
+We will use the dataset from:
+- Amazon product dataset (small) - https://www.kaggle.com/datasets/promptcloud/amazon-product-dataset-2020
+- Amazon product dataset (large) - https://www.kaggle.com/datasets/piyushjain16/amazon-product-data/data
+- Amazon QA dataset - https://cseweb.ucsd.edu/~jmcauley/datasets/amazon/qa/ 
+
+We acknowledge and appreciate the creators and contributors of the dataset for making it available for public use.
+
+## Task Distribution
+- Data Collection  - Puay and Kyi
+- Modeling	
+    - Classification - Nopawee
+    - Language Model - Minn
+- Web Application - Wut Yee
+- Experiment Testing - Puay and Kyi
+- Reporting	and Others - Puay and Kyi
 
 ## Acknowledgments
 

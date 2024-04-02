@@ -63,6 +63,10 @@ We will use the dataset from:
 - Amazon product dataset (large) - https://www.kaggle.com/datasets/piyushjain16/amazon-product-data/data
 - Amazon QA dataset - https://cseweb.ucsd.edu/~jmcauley/datasets/amazon/qa/ 
 
+We acknowledge and appreciate the creators and contributors of the dataset for making it available for public use.
+
+
+
 # Paper Summaries: 
 
 ## 1. Active Retrieval Augmented Generation
