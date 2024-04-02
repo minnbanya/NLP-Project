@@ -46,7 +46,7 @@ Addressing these challenges is imperative to bridge the gap in customer service 
 - Data Source and Preprocessing
 - NLP
     - Classification Part 
-        - MLFlow will be used to save the model and see the performance of model (select the best performance model as our best model)
+        - MLflow will be used to save the models and see the performance of the models (select the best performance model as our best model)
     - LLM Part
         - Database will be split into vector stores
         - MLflow will be used for experiment logging and model integration
