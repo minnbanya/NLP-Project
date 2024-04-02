@@ -18,7 +18,7 @@ Key Factors Driving Adoption:
 - Scalability: Handles multiple conversations on Amazon simultaneously without compromising quality.
 - Enhanced Customer Experience: Delivers personalized recommendations based on Amazon customer preferences and browsing history.
 - Cost-Efficiency: Reduces operational expenses for Amazon sellers by automating routine sales tasks.
-- Data Insights: Generates valuable data for Amazon sellers to analyze customer behavior and refine sales strategies.
+- Data Insights: Generates valuable data for Amazon sellers to analyze customer behavior and refine sales strategies.<br>
 In summary, sales chatbots tailored for Amazon offer sellers a modern and effective solution for enhancing customer engagement, driving sales, and gaining valuable insights into Amazon customer preferences and behavior.
 
 ## Problems and Motivation
@@ -45,8 +45,8 @@ Addressing these challenges is imperative to bridge the gap in customer service 
 ## Architecture of the Solution
 - Data Source and Preprocessing
 - NLP
-    - Classification Part
-        - will update according to Nopawee
+    - Classification Part 
+        - MLFlow will be used to save the model and see the performance of model (select the best performance model as our best model)
     - LLM Part
         - Database will be split into vector stores
         - MLflow will be used for experiment logging and model integration
