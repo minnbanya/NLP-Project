@@ -299,7 +299,7 @@ This paper focuses on investigating the conversations starting from open-domain 
 **Background:** Existing dialogue systems are usually categorized into two types: 
 - Open-domain : focus on free chatting with users and are not able to complete tasks as human assistants.
 - Task-oriented : is designed to complete the users’ goals.
-- These two types have been studied separately till these study has released.
+- These two types have been studied separately till this study has released.
 
 **Proposed Approach:** proposed approach introduces SalesBot as a new framework that generates data transitioning from open-domain chit-chats to task-oriented dialogues. This framework consists of 
 - Open-Domain Dialogue Generation
