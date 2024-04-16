@@ -76,7 +76,7 @@ We acknowledge and appreciate the creators and contributors of the dataset for m
 ## Task Distribution
 - Data Collection  - Puay and Kyi
 - Modeling	
-    - Classification - Nopawee
+    - Classification - Noppawee
     - Language Model - Minn
 - Web Application - Wut Yee
 - Experiment Testing - Puay and Kyi
@@ -317,4 +317,4 @@ This paper focuses on investigating the conversations starting from open-domain 
 
 ## Acknowledgments
 
-We extend our heartfelt gratitude to our dedicated team for their unwavering support and guidance throughout the project. Their invaluable contributions have been instrumental in the development and testing of this project. We would also like to express our special thanks to Minn, Wut Yee, Kyi, Puay and Nopawee for their exceptional efforts and commitment to ensuring the success of this endeavor.
+We extend our heartfelt gratitude to our dedicated team for their unwavering support and guidance throughout the project. Their invaluable contributions have been instrumental in the development and testing of this project. We would also like to express our special thanks to Minn, Wut Yee, Kyi, Puay and Noppawee for their exceptional efforts and commitment to ensuring the success of this endeavor.
