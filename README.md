@@ -82,6 +82,28 @@ We acknowledge and appreciate the creators and contributors of the dataset for m
 - Experiment Testing - Puay and Kyi
 - Reporting	and Others - Puay and Kyi
 
+  ## Progress update
+  #### Progress on classification model
+  - Categorize into 17 classes
+      - Toys_and_Games
+      - Health_and_Personal_Care
+      - Cell_Phones_and_Accessories
+      - Home_and_Kitchen
+      - Musical_Instruments
+      - Baby, Sports_and_Outdoors
+      - Patio_Lawn_and_Garden
+      - Video_Games
+      - Pet_Supplies
+      - Tools_and_Home_Improvement
+      - Beauty
+      - Electronics
+      - Grocery_and_Gourmet_Food
+      - Automotive
+      - Office_Products
+      - Clothing_Shoes_and_Jewelry
+- We have done experiment with 2 models; biLSTM, and CNN
+- The model performance are around 44% for validation and test set for both model
+
 # Paper Summaries: 
 
 ## 1. Active Retrieval Augmented Generation
