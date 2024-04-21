@@ -101,8 +101,43 @@ We acknowledge and appreciate the creators and contributors of the dataset for m
   - Automotive
   - Office_Products
   - Clothing_Shoes_and_Jewelry
-- We have done experiment with 2 models; biLSTM, and CNN
-- The model performance are around 44% for validation and test set for both model
+- We have trained 2 models (biLSTM and CNN) on different parameter with small (500 questions per product category) and large dataset (1000 questions per product category). Moreover, we saved the model when the validation loss is improve. Therefore, we select the best model with specific parameter based on minimum validation loss
+
+Github link for our experiment: https://github.com/Noppawee-Teeraratchanon/NLP_Project_Question_Classification_By_ProductType.git
+
+#### biLSTM with small dataset
+
+![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/biLSTM500_1.png)
+
+![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/biLSTM500_2.png)
+
+
+
+#### biLSTM with large dataset
+
+![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/biLSTM1000_1.png)
+
+![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/biLSTM1000_2.png)
+
+
+#### CNN with small dataset
+
+![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/CNN500.png)
+
+
+#### CNN with large dataset
+
+![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/CNN1000.png)
+
+
+
+
+From the experiment, we can conclude that both models are better when the dataset is larger. For biLSTM, when we increase the epoch, hidden dimension, and number of layers, the model is worse. For CNN, we can conclude that when the number of filters and epoch increase, the model is better
+<br>
+
+Based on minimum validation loss, CNN with 30 epochs, 150 number of filters is our best model and we will use it to train with a larger dataset (2000 questions per category)
+
+- We have tested model with test set and the model got around 44% accuracy
 
 # Paper Summaries: 
 
