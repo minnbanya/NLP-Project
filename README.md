@@ -82,8 +82,8 @@ We acknowledge and appreciate the creators and contributors of the dataset for m
 - Experiment Testing - Puay and Kyi
 - Reporting	and Others - Puay and Kyi
 
-## Progress update
-#### Progress on classification model
+## Progress Update
+### Progress on classification model
 - Categorize into 17 classes
   - Toys_and_Games
   - Health_and_Personal_Care
