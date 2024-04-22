@@ -139,6 +139,23 @@ Based on minimum validation loss, CNN with 30 epochs, 150 number of filters is o
 
 - We have tested model with test set and the model got around 44% accuracy
 
+### Progress on web application
+
+- Chat Interface:
+    - Functionality:
+        - Allows users to type messages (Type your message...), send them, and receive responses from the chatbot.
+        - Messages are displayed in a visually distinct format, with user messages on the right and bot responses on the left.
+
+- Additional Sections:
+    - References:
+        - Contains detailed information about the product.
+    - Product Review:
+        - Displays product review content for user reference.
+    - Product Link:
+        - Provides a link for users to access more detailed product information.
+
+![Alt Text](figures/progress_webapp.png)
+
 # Paper Summaries: 
 
 ## 1. Active Retrieval Augmented Generation
