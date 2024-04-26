@@ -1,5 +1,10 @@
 /vector-store
-/models
+/language_model/models
+/language_model/vector_stores/500
+/language_model/vector_stores/1000
 /data/product-data/train.csv
 /data/multi-ans
 /data/meta
+/language_model/__pycache__
+/language_model/mlruns
+/data/qa
