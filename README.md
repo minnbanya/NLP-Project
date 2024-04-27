@@ -80,6 +80,12 @@ Addressing these challenges is imperative to bridge the gap in customer service 
     - Integration with Social Media: Leveraging chatbots on social platforms for shopping and customer support, tapping into wider audience reach.
     - Gamification: Introducing gamified elements to engage users and incentivize purchases, fostering customer loyalty and retention.
 
+Gap Between Related Work  
+
+    The gap in related work lies in the absence of comprehensive studies that specifically address the integration of both classification models and language generation models (LLMs) within the context of e-commerce sales chatbots, particularly focusing on platforms like Amazon. While existing research explores the use of either classification models or LLMs in isolation, there's a dearth of literature that examines their combined application to enhance the conversational capabilities and effectiveness of sales chatbots in e-commerce settings.
+
+    Summarizing, the existing literature predominantly focuses on either classification models or LLMs separately, with limited attention given to their synergistic integration within e-commerce chatbots. This gap presents an opportunity for our project to explore the potential synergies between these two approaches and demonstrate their collective impact on improving customer engagement, driving sales, and fostering loyalty within the Amazon ecosystem. Through our research and implementation efforts, we aim to bridge this gap by providing valuable insights into the integration of classification and language generation techniques for enhancing e-commerce chatbot performance.
+
 ## Solution Requirements
 - Natural Language Processing (NLP): Ability to understand and respond to customer inquiries in natural language.
 - Faster and more accurate information retrieval
