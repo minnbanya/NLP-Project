@@ -23,7 +23,7 @@ embedding_model = HuggingFaceInstructEmbeddings(
 )
 
 #locate vectorstore
-vector_path = './vector_stores'
+vector_path = '../NLP/NLP-Project/language_model/vector_stores'
 if not os.path.exists(vector_path):
     os.makedirs(vector_path)
     print('create path done')
@@ -36,8 +36,8 @@ def predict(text_str):
     while len(text.split()) < 5:
         text = text + ' <pad>'
     tokenizer = get_tokenizer('spacy', language='en_core_web_sm')
-    loaded_model = torch.jit.load('../question_classification/model/5class/CNN.pt')
-    with open('../question_classification/model/5class/vocab.pkl', 'rb') as f:
+    loaded_model = torch.jit.load('../NLP/NLP-Project/question_classification/model/5class/CNN.pt')
+    with open('../NLP/NLP-Project/question_classification/model/5class/vocab.pkl', 'rb') as f:
         loaded_vocab = dill.load(f)
     text = torch.tensor(loaded_vocab(tokenizer(text))).to(device)
     text = text.reshape(1, -1)
@@ -56,7 +56,7 @@ def choose_vector_store(text, size):
     print(predict(text))
     category = categories[predict(text)]
     #calling vector from local
-    vector_path = './vector_stores'
+    vector_path = '../NLP/NLP-Project/language_model/vector_stores'
 
     db_file_name = f"{size}/{category}"
 
