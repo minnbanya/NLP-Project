@@ -129,6 +129,8 @@ We have trained 3 models (biLSTM, CNN, and BERT) on different parameters.
   - We selected the CNN with 5 classes as our best model 
 - For evaluation, we tested selected model (CNN with 5 classes) with test set and the model got around 61.5% accuracy
 
+![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/figures/classification_result.png)<br>
+
 ### Progress on web application
 
 - Chat Interface:
