@@ -97,62 +97,37 @@ We acknowledge and appreciate the creators and contributors of the dataset for m
 - Experiment Testing - Thamakorn and Kyi
 - Reporting	and Others - Thamakorn and Kyi
 
-## Progress Update
-### Progress on classification model
-- Categorize into 17 classes
-  - Toys_and_Games
-  - Health_and_Personal_Care
-  - Cell_Phones_and_Accessories
-  - Home_and_Kitchen
-  - Musical_Instruments
-  - Baby, Sports_and_Outdoors
-  - Patio_Lawn_and_Garden
-  - Video_Games
-  - Pet_Supplies
-  - Tools_and_Home_Improvement
-  - Beauty
-  - Electronics
-  - Grocery_and_Gourmet_Food
-  - Automotive
-  - Office_Products
-  - Clothing_Shoes_and_Jewelry
-- We have trained 2 models (biLSTM and CNN) on different parameter with small (500 questions per product category) and large dataset (1000 questions per product category). Moreover, we saved the model when the validation loss is improve. Therefore, we select the best model with specific parameter based on minimum validation loss
-
-Github link for our experiment: https://github.com/Noppawee-Teeraratchanon/NLP_Project_Question_Classification_By_ProductType.git
-
-#### biLSTM with small dataset
-
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/biLSTM500_1.png)
-
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/biLSTM500_2.png)
-
-
-
-#### biLSTM with large dataset
-
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/biLSTM1000_1.png)
-
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/biLSTM1000_2.png)
-
-
-#### CNN with small dataset
-
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/CNN500.png)
-
-
-#### CNN with large dataset
-
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/CNN1000.png)
-
-
-
-
-From the experiment, we can conclude that both models are better when the dataset is larger. For biLSTM, when we increase the epoch, hidden dimension, and number of layers, the model is worse. For CNN, we can conclude that when the number of filters and epoch increase, the model is better
-<br>
-
-Based on minimum validation loss, CNN with 30 epochs, 150 number of filters is our best model and we will use it to train with a larger dataset (2000 questions per category)
-
-- We have tested model with test set and the model got around 44% accuracy
+## Methodology
+### Classification model
+We have trained 3 models (biLSTM, CNN, and BERT) on different parameters.
+- For dataset, there are 17 classes including:
+  - (1) Electronics
+  - (2) Home_and_Kitchen
+  - (3) Sports_and_Outdoors
+  - (4) Tools_and_Home_Improvement
+  - (5) Health_and_Personal_Care
+  - (6) Automotive
+  - (7) Cell_Phones_and_Accessories
+  - (8) Patio_Lawn_and_Garden
+  - (9) Toys_and_Games                 
+  - (10) Office_Products
+  - (11) Beauty
+  - (12) Pet_Supplies
+  - (13) Baby
+  - (14) Musical_Instruments
+  - (15) Grocery_and_Gourmet_Food
+  - (16) Video_Games
+  - (17) Clothing_Shoes_and_Jewelry
+- For experimental design:
+  - We trained those 3 models with small (500 questions per product category) and large dataset (2000 questions per product category) with 17 classes since we saved the model when the validation loss is improved. Therefore, we select the best model with specific parameter based on minimum validation loss.
+  - We tried to reduce the number of classes from 17 to 10 classes (class (1)-(10)) to see the trend of improvement. From comparing the result between model on 17 classes (all result figure on https://github.com/minnbanya/NLP-Project/tree/main/question_classification/17class-model) and 10 classes (all result figure on https://github.com/minnbanya/NLP-Project/tree/main/question_classification/10class-model) , we got CNN as our best model based on training time and minimum validation loss.
+  - After we got the best model, we trained it with larger dataset (10000 questions per product category) in 10 classes (class (1)-(10)), 9 classes (class (1)-(9)), 7 classes (class (1)-(7)), and 5 classes (class (1)-(5)). 
+  	- On 10 classes, the model got 1.413 on validation loss and around 52.9% validation accuracy
+	- On 9 classes, the model got 1.349 on validation loss and around 54.5% validation accuracy
+    - On 7 classes, the model got 1.136 on validation loss and around 59.8% validation accuracy
+    - On 5 classes, the model got 0.986 on validation loss and around 63.1% validation accuracy
+  - We selected the CNN with 5 classes as our best model 
+- For evaluation, we tested selected model (CNN with 5 classes) with test set and the model got around 61.5% accuracy
 
 ### Progress on web application
 
