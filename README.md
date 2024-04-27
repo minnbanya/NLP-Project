@@ -13,14 +13,14 @@ Allow us to introduce the exceptional individuals who form the backbone of our p
 Nowadays, AI has become popular and used in various industries. AI can reduce operational costs, and increase customer satisfaction. Sales chatbot is the best choice to apply in e-commerce business since sales chatbot can assist customers immediately, and give suggestions based on customer preferences. Therefore, we are interested in developing a sales chatbot for Amazon business in order to apply knowledge from NLP class into the real world scenario.
 
 
-## Problems and Solution
-#### Problem:
+## Problems and Solutions
+#### Problems:
 - High Operational Costs: Relying solely on human sales representatives can be expensive due to the need for salaries, benefits, and training.
 - Limited Availability: Human sales representatives have limited availability, especially outside of regular business hours. Moreover, the company can miss opportunities for sales when a customer visits a website seeking assistance and no response back.
 - Delayed Responses: customers might have to wait for a human representative to become available to address their queries, leading to frustration and potential abandonment of the purchase process.
 - Lack of Data Insights: businesses may miss out on opportunities to improve their products, services, and marketing strategies.
 
-#### Solution:
+#### Solutions:
 We should deploy a chatbot for the following reasons:
 - Cost Efficiency: Implementing a chatbot reduces operational costs associated with human sales representatives, including salaries, benefits, and training expenses.
 - 24/7 Availability: A chatbot provides round-the-clock availability, ensuring that customers receive immediate assistance even outside of regular business hours, thus preventing missed sales opportunities.
@@ -28,9 +28,9 @@ We should deploy a chatbot for the following reasons:
 - Data Insights: Chatbots collect valuable data on customer interactions, preferences, and pain points, enabling businesses to gain insights for product improvement, service enhancement, and marketing strategy refinement.
 
 
-## Related Work
+## Related Works
 1. SuperAgent - a customer service chatbot for E-commerce websites.
-
+![Alt Text](figures/SuperAgent.png)
 SuperAgent is a conversational AI platform that offers chatbot solutions for businesses. It provides tools and technologies to create intelligent chatbots capable of interacting with users through natural language processing. SuperAgent's chatbots can be integrated into various platforms such as websites, mobile apps, and messaging applications to automate customer service, sales support, and other interactions. The platform typically offers features like customizable conversation flows, integration with backend systems, analytics, and reporting capabilities to enhance user experience and business efficiency.
 One of the main features of SuperAgent is AI. it utilizes LLMs so that Superagent can help users answer their customer requests. Superagent can operate in fully automatic chatbot mode outside of opening hours, or as an Agent Assist to help support staff to be more efficient.
 
@@ -41,6 +41,9 @@ AliMe's comprehensive framework combines rule-based matching, retrieval, and dee
 Intent Recognition: This tier discerns the underlying intentions behind user messages, categorizing them and extracting relevant attributes. These intentions drive subsequent processes, such as domain identification, making this tier crucial for initiating contextual and domain-specific actions.
 Response Generation: For FAQs, AliMe employs knowledge graph queries or retrieval models. These models extract information from a vast pool of data, facilitating accurate answer identification while also minimizing maintenance costs through integration with traditional retrieval methods. Tasks requiring specific actions, such as booking a flight, are addressed through a combination of intention-based matching and deep reinforcement learning models. Chitchat interactions, characterized by casual conversation, leverage a hybrid approach that integrates retrieval and deep learning models. Initially, a retrieval-based model selects responses from a predefined corpus, followed by re-ranking using a Seq2Seq model for more nuanced outputs.
 Deep Learning Practices for Intent Recognition: AliMe employs deep learning models that incorporate textual features and user behaviors to classify intentions effectively. These models leverage both traditional bag-of-words representations and word embeddings to capture contextual nuances. In developing DL-based intention classification systems, AliMe's team experimented with both multi-classification and binary classification models. While the former offers speed, it requires frequent retraining for label additions, whereas the latter, though less efficient, allows for flexible expansion without retraining.
+
+### Gap Between Related Work
+The existing research, represented by SuperAgent and AliMe, mainly focuses on conversational AI solutions for customer service and dialogue management across diverse contexts. However, there's a gap when it comes to applying these approaches to sales chatbots, which is the primary focus of our project. Unlike the broader focus on customer support and general dialogue, our project centers on developing a chatbot tailored specifically for driving sales on Amazon platforms. This involves utilizing classification models and Large Language Models (LLMs) to improve the chatbot's ability to understand user intents, offer personalized product recommendations, and ultimately boost sales. Thus, the gap lies in adapting advanced AI techniques to the sales domain, particularly for E-commerce businesses aiming to enhance their sales processes and engage customers effectively through conversational interfaces.
 
 
 ## Solution Requirements
