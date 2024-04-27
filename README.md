@@ -119,9 +119,8 @@ GitHub will manage codebase changes while also tracking modifications in applica
 ## Dataset Information
 
 We will use the dataset from:
-- Amazon product dataset (small) - https://www.kaggle.com/datasets/promptcloud/amazon-product-dataset-2020
-- Amazon product dataset (large) - https://www.kaggle.com/datasets/piyushjain16/amazon-product-data/data
-- Amazon QA dataset - https://cseweb.ucsd.edu/~jmcauley/datasets/amazon/qa/ 
+- Amazon product dataset (extracted from meta data) - https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023 
+- Train dataset - https://github.com/amazonqa/amazonqa?tab=readme-ov-file
 
 We acknowledge and appreciate the creators and contributors of the dataset for making it available for public use.
 
