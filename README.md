@@ -8,27 +8,25 @@ Allow us to introduce the exceptional individuals who form the backbone of our p
 - Thamakorn Kiattikaikul    (st124481)
 - Noppawee Teeraratchanon   (st124482)
 
-## Project Background: The Rise of Sales Chatbots for Amazon
+## Project Background
 
-Sales chatbots, specifically tailored for Amazon, are AI-driven virtual assistants designed to engage customers in conversational interactions, guide them through the Amazon sales process, and facilitate purchases.
+Nowadays, AI has become popular and used in various industries. AI can reduce operational costs, and increase customer satisfaction. Sales chatbot is the best choice to apply in e-commerce business since sales chatbot can assist customers immediately, and give suggestions based on customer preferences. Therefore, we are interested in developing a sales chatbot for Amazon business in order to apply knowledge from NLP class into the real world scenario.
 
-Key Factors Driving Adoption:
 
-- 24/7 Availability: Provides instant assistance to Amazon customers round-the-clock.
-- Scalability: Handles multiple conversations on Amazon simultaneously without compromising quality.
-- Enhanced Customer Experience: Delivers personalized recommendations based on Amazon customer preferences and browsing history.
-- Cost-Efficiency: Reduces operational expenses for Amazon sellers by automating routine sales tasks.
-- Data Insights: Generates valuable data for Amazon sellers to analyze customer behavior and refine sales strategies.<br>
-In summary, sales chatbots tailored for Amazon offer sellers a modern and effective solution for enhancing customer engagement, driving sales, and gaining valuable insights into Amazon customer preferences and behavior.
-
-## Problems and Motivation
+## Problems and Solution
 #### Problem:
-In the realm of online sales, two critical challenges emerge. 
-    - Firstly, customers frequently abandon the sales process due to a lack of immediate assistance or the inability to obtain answers swiftly. 
-    - Secondly, customers often seek accurate information and may pose follow-up questions that conventional pre-programmed chatbots cannot sufficiently address. This deficiency leads to customer frustration and potential loss of sales as they turn elsewhere for assistance or abandon their purchases altogether. Traditional chatbots, constrained by their inability to adapt to nuanced inquiries, struggle to provide satisfactory responses in these scenarios.
+- High Operational Costs: Relying solely on human sales representatives can be expensive due to the need for salaries, benefits, and training.
+- Limited Availability: Human sales representatives have limited availability, especially outside of regular business hours. Moreover, the company can miss opportunities for sales when a customer visits a website seeking assistance and no response back.
+- Delayed Responses: customers might have to wait for a human representative to become available to address their queries, leading to frustration and potential abandonment of the purchase process.
+- Lack of Data Insights: businesses may miss out on opportunities to improve their products, services, and marketing strategies.
 
-#### Motivation:
-Addressing these challenges is imperative to bridge the gap in customer service and ensure a seamless and satisfying shopping experience. By tackling this issue head-on, businesses can enhance customer trust, foster loyalty, and ultimately drive sales growth on platforms such as Amazon. The motivation stems from the desire to increase sales, elevate customer satisfaction levels, and alleviate the workload on human sales representatives. A sales chatbot equipped to handle nuanced inquiries and provide accurate information in real-time presents a promising solution to these pressing issues.
+#### Solution:
+We should deploy a chatbot for the following reasons:
+- Cost Efficiency: Implementing a chatbot reduces operational costs associated with human sales representatives, including salaries, benefits, and training expenses.
+- 24/7 Availability: A chatbot provides round-the-clock availability, ensuring that customers receive immediate assistance even outside of regular business hours, thus preventing missed sales opportunities.
+- Instant Responses: With a chatbot, customers receive instant responses to their inquiries, eliminating delays and potential frustration during the purchase process.
+- Data Insights: Chatbots collect valuable data on customer interactions, preferences, and pain points, enabling businesses to gain insights for product improvement, service enhancement, and marketing strategy refinement.
+
 
 ## Background and Related Work
 1. Chatbots in E-commerce:  
@@ -128,13 +126,13 @@ We will use the dataset from:
 We acknowledge and appreciate the creators and contributors of the dataset for making it available for public use.
 
 ## Task Distribution
-- Data Collection  - Puay and Kyi
+- Data Collection  - Thamakorn and Kyi
 - Modeling	
     - Classification - Noppawee
     - Language Model - Minn
 - Web Application - Wut Yee
-- Experiment Testing - Puay and Kyi
-- Reporting	and Others - Puay and Kyi
+- Experiment Testing - Thamakorn and Kyi
+- Reporting	and Others - Thamakorn and Kyi
 
 ## Progress Update
 ### Progress on classification model
