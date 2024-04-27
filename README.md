@@ -18,14 +18,14 @@ Nowadays, AI has become popular and used in various industries. AI can reduce op
 - High Operational Costs: Relying solely on human sales representatives can be expensive due to the need for salaries, benefits, and training.
 - Limited Availability: Human sales representatives have limited availability, especially outside of regular business hours. Moreover, the company can miss opportunities for sales when a customer visits a website seeking assistance and no response back.
 - Delayed Responses: customers might have to wait for a human representative to become available to address their queries, leading to frustration and potential abandonment of the purchase process.
-- Lack of Data Insights: businesses may miss out on opportunities to improve their products, services, and marketing strategies.
+- Differences in human skills: Because each human salesperson has different skills and knowledge, sales stability may be affected. This variability in expertise among sales staff can lead to inconsistent sales performance, making it challenging to maintain a steady level of sales.
 
 #### Solutions:
 We should deploy a chatbot for the following reasons:
 - Cost Efficiency: Implementing a chatbot reduces operational costs associated with human sales representatives, including salaries, benefits, and training expenses.
 - 24/7 Availability: A chatbot provides round-the-clock availability, ensuring that customers receive immediate assistance even outside of regular business hours, thus preventing missed sales opportunities.
 - Instant Responses: With a chatbot, customers receive instant responses to their inquiries, eliminating delays and potential frustration during the purchase process.
-- Data Insights: Chatbots collect valuable data on customer interactions, preferences, and pain points, enabling businesses to gain insights for product improvement, service enhancement, and marketing strategy refinement.
+- Consistent Sales Performance: A chatbot ensures consistent sales interactions regardless of individual salesperson expertise, helping to maintain a steady level of sales.
 
 
 ## Related Works
