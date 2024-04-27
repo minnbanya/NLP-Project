@@ -8,3 +8,5 @@
 /language_model/__pycache__
 /language_model/mlruns
 /data/qa
+language_model/generate_vector_stores_tmp.ipynb
+language_model/answer_test.ipynb

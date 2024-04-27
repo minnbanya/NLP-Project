@@ -31,6 +31,12 @@
             padding: 8px 12px;
             margin-left: 10px;
         }
+        .product-info {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -47,17 +53,9 @@
                 <button id="send-btn" class="btn btn-primary btn-block">Send</button>
             </div>
             <div class="col-md-6 offset-md-3 mt-4">
-                <div id="reference-container">
-                    <h3>References</h3>
-                    <p>Product detail information will go here.</p>
-                </div>
-                <div id="product-review-container">
-                    <h3>Product Review</h3>
-                    <p>Product review will go here.</p>
-                </div>
-                <div id="product-link-container">
-                    <h3>Product Link</h3>
-                    <p><a href="#">Product Link</a></p>
+                <div id="product-info-container">
+                    <h3>Product Information</h3>
+                    <!-- Product details will be appended here -->
                 </div>
             </div>
         </div>
@@ -66,14 +64,26 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Function to append user and bot messages to chat history
             function appendMessage(message, sender) {
                 var messageClass = (sender === 'You') ? 'user-message' : 'bot-message';
                 $('#chat-history').append(`<div class="message-container"><p class="${messageClass}">${message}</p></div>`);
                 $('#chat-container').scrollTop($('#chat-container')[0].scrollHeight);
             }
 
-            // Function to send user message to server and get bot response
+            function displayProducts(products) {
+                $('#product-info-container').empty().append('<h3>Product Information</h3>');
+                products.forEach(product => {
+                    $('#product-info-container').append(
+                        `<div class="product-info">
+                            <strong>${product.title}</strong><br>
+                            Price: ${product.price}<br>
+                            Rating: ${product.average_rating} (${product.rating_number} ratings)<br>
+                            Features: <ul>${product.features.map(feature => `<li>${feature}</li>`).join('')}</ul>
+                        </div>`
+                    );
+                });
+            }
+
             function sendMessage() {
                 var userMessage = $('#user-message').val();
                 if (userMessage.trim() != '') {
@@ -86,6 +96,7 @@
                         data: JSON.stringify({ 'message': userMessage }),
                         success: function(response) {
                             appendMessage(response.bot_response, 'Bot');
+                            displayProducts(response.product_list); // Display product info
                         },
                         error: function(error) {
                             console.log(error);
@@ -94,30 +105,11 @@
                 }
             }
 
-            // Send message when send button is clicked
-            $('#send-btn').click(function() {
-                sendMessage();
-            });
-
-            // Send message when Enter key is pressed
+            $('#send-btn').click(sendMessage);
             $('#user-message').keypress(function(event) {
                 if (event.which == 13) {
+                    event.preventDefault();  // Stop form from submitting on Enter
                     sendMessage();
-                }
-            });
-
-            // Load chat history when page is loaded
-            $.ajax({
-                url: '/get_chat_history',
-                type: 'GET',
-                success: function(response) {
-                    response.forEach(function(message) {
-                        appendMessage(message.user, 'You');
-                        appendMessage(message.bot, 'Bot');
-                    });
-                },
-                error: function(error) {
-                    console.log(error);
                 }
             });
         });

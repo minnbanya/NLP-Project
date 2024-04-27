@@ -40,21 +40,31 @@ for size in sizes:
             # Load the dataset from disk
             dataset = load_from_disk(dataset_path)
             # Build text from all fields
-            texts = [json.dumps(entry) for entry in dataset]
+            # texts = [json.dumps(entry) for entry in dataset]
+            # columns = ['title', 'average_rating', 'rating_number', 'features', 'description', 'price']
+            # columns = ['main_category', 'title', 'average_rating', 'rating_number', 'features', 'description', 'price', 'categories', 'details', 'parent_asin', 'bought_together', 'subtitle']
+            columns = ['title', 'average_rating', 'rating_number', 'features', 'description', 'price', 'details']
 
-            text_splitter = RecursiveCharacterTextSplitter(
-                chunk_size = 700,
-                chunk_overlap = 100
-            )
+            texts = []
 
-            split_text = []    
-            for text in texts:
-                txt = text_splitter.split_text(text)
-                for t in txt:
-                    split_text.append(t)
+            for entry in dataset:
+                filtered_entry = {key: entry[key] for key in columns if key in entry}
+                json_text = json.dumps(filtered_entry)
+                texts.append(json_text)
+
+            # text_splitter = RecursiveCharacterTextSplitter(
+            #     chunk_size = 700,
+            #     chunk_overlap = 100
+            # )
+
+            # split_text = []    
+            # for text in texts:
+            #     txt = text_splitter.split_text(text)
+            #     for t in txt:
+            #         split_text.append(t)
 
             # Create and populate the FAISS index
-            vectordb = FAISS.from_texts(split_text, embedding_model)
+            vectordb = FAISS.from_texts(texts, embedding_model)
 
             # Directory to save the vector store
             output_dir = os.path.join('vector_stores', size, category)

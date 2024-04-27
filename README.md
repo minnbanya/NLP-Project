@@ -28,59 +28,20 @@ We should deploy a chatbot for the following reasons:
 - Data Insights: Chatbots collect valuable data on customer interactions, preferences, and pain points, enabling businesses to gain insights for product improvement, service enhancement, and marketing strategy refinement.
 
 
-## Background and Related Work
-1. Chatbots in E-commerce:  
-    In recent years, chatbots have become integral to e-commerce, serving as 24/7 virtual sales assistants. With AI and NLP, they offer personalized support, recommend products, and streamline the sales process. By automating tasks, they boost efficiency and scalability, while gathering valuable customer insights. Chatbots not only enhance the shopping experience but also drive sales growth, making them indispensable tools for modern e-commerce businesses.
+## Related Work
+1. SuperAgent - a customer service chatbot for E-commerce websites.
 
-    Successful e-commerce chatbots, like Sephora's Virtual Artist and eBay's ShopBot, personalize shopping experiences by offering product recommendations and style advice. They streamline the purchasing process, increasing sales conversion rates by providing instant assistance and addressing customer queries promptly. These chatbots enhance customer engagement, foster loyalty, and contribute to revenue growth, showcasing the transformative impact of AI-driven virtual assistants in the e-commerce landscape.
+SuperAgent is a conversational AI platform that offers chatbot solutions for businesses. It provides tools and technologies to create intelligent chatbots capable of interacting with users through natural language processing. SuperAgent's chatbots can be integrated into various platforms such as websites, mobile apps, and messaging applications to automate customer service, sales support, and other interactions. The platform typically offers features like customizable conversation flows, integration with backend systems, analytics, and reporting capabilities to enhance user experience and business efficiency.
+One of the main features of SuperAgent is AI. it utilizes LLMs so that Superagent can help users answer their customer requests. Superagent can operate in fully automatic chatbot mode outside of opening hours, or as an Agent Assist to help support staff to be more efficient.
 
-2. Natural Language Processing (NLP):  
-    NLP techniques enable chatbots to comprehend and generate natural language responses. These include intent recognition, entity recognition, and sentiment analysis. By parsing user input, chatbots identify user intentions and extract relevant information to formulate appropriate responses. Advanced techniques like machine translation and summarization enhance language understanding and generation capabilities. NLP empowers conversational chatbots to engage users in meaningful interactions, providing personalized assistance and recommendations. This ensures a seamless and natural dialogue between users and chatbots, driving improved user experience and satisfaction.
+2. AliMe - a dialogue platform based on NLP that enables smart dialogue through various dialogue-enabling clients.
 
-    NLP is pivotal for chatbots in deciphering customer queries, extracting pertinent details, and delivering precise responses. Techniques like intent recognition classify user requests into actionable categories, while entity recognition identifies key information such as product names or dates. Sentiment analysis gauges user emotions, enabling chatbots to tailor responses accordingly. These NLP capabilities empower chatbots to understand complex language nuances, adapt to varying user intents, and provide contextually relevant answers. By leveraging NLP, chatbots optimize user interactions, streamline information retrieval, and enhance overall user satisfaction by delivering accurate and timely assistance.
+AliMe's comprehensive framework combines rule-based matching, retrieval, and deep learning techniques to power its dialogue system. The architecture is organized into 3 main layers to effectively handle user interactions:
 
-3. Classification Models:  
-    Classification models categorize data into predefined classes or categories based on input features. In the context of customer queries in e-commerce, these models analyze text inputs to classify them into relevant product categories or topics. For example, a classification model trained on past customer queries can identify whether a query pertains to electronics, clothing, or home goods. By learning patterns in the text data, the model assigns probabilities to each category, enabling it to classify new queries accurately. This application of classification models streamlines customer support processes, improves query routing, and enhances the overall user experience in e-commerce platforms.
-    - Logistic Regression:  
-        - Strengths: Simple and computationally efficient, making it easy to implement and interpret. It provides probabilistic outputs, which are useful for understanding the certainty of predictions. Works well with linearly separable data and handles binary classification tasks effectively.
-        - Limitations: Assumes a linear relationship between input features and the log-odds of the response variable. May struggle with non-linear relationships and complex datasets. Not suitable for tasks with multiple class labels without modification.
-    - Decision Trees:  
-        - Strengths: Easy to understand and visualize, making it ideal for explaining model decisions. Can handle both numerical and categorical data. Automatically selects the most informative features and can capture non-linear relationships.
-        - Limitations: Prone to overfitting, especially with deep trees and noisy data. Sensitive to small variations in the training data, which can lead to different tree structures. Decision trees are relatively unstable and may require ensemble methods like random forests to improve performance.
-    - Support Vector Machines (SVM):  
-        - Strengths: Effective in high-dimensional spaces and with datasets that have clear margins of separation. Works well with both linear and non-linear data through the use of different kernel functions. Robust against overfitting, especially in high-dimensional spaces.
-        - Limitations: Can be computationally expensive, especially with large datasets. Requires careful selection of kernel functions and tuning of hyperparameters. SVMs perform poorly with datasets that have a large number of noise points or overlapping classes.
+Intent Recognition: This tier discerns the underlying intentions behind user messages, categorizing them and extracting relevant attributes. These intentions drive subsequent processes, such as domain identification, making this tier crucial for initiating contextual and domain-specific actions.
+Response Generation: For FAQs, AliMe employs knowledge graph queries or retrieval models. These models extract information from a vast pool of data, facilitating accurate answer identification while also minimizing maintenance costs through integration with traditional retrieval methods. Tasks requiring specific actions, such as booking a flight, are addressed through a combination of intention-based matching and deep reinforcement learning models. Chitchat interactions, characterized by casual conversation, leverage a hybrid approach that integrates retrieval and deep learning models. Initially, a retrieval-based model selects responses from a predefined corpus, followed by re-ranking using a Seq2Seq model for more nuanced outputs.
+Deep Learning Practices for Intent Recognition: AliMe employs deep learning models that incorporate textual features and user behaviors to classify intentions effectively. These models leverage both traditional bag-of-words representations and word embeddings to capture contextual nuances. In developing DL-based intention classification systems, AliMe's team experimented with both multi-classification and binary classification models. While the former offers speed, it requires frequent retraining for label additions, whereas the latter, though less efficient, allows for flexible expansion without retraining.
 
-4. Language Generation Models (LLMs):  
-    Language generation models like GPT-3 utilize transformer architectures to produce human-like text based on input prompts. Trained on vast datasets, GPT-3 excels in generating coherent and contextually relevant responses across diverse topics. With 175 billion parameters, it captures intricate language patterns, demonstrating fluency and creativity. Its versatility enables applications in content generation, chatbots, translation, and code synthesis. GPT-3's remarkable ability to mimic human writing style and produce high-quality text marks a significant advancement in natural language processing.
-
-    Advancements in Language Generation Models (LLMs) like GPT-3 enhance chatbots' conversational capabilities significantly. LLMs can generate detailed product descriptions by analyzing various sources, personalize recommendations based on user preferences, and provide accurate responses to customer inquiries. By understanding context and synthesizing information, LLM-powered chatbots offer more engaging and tailored interactions, driving improved customer satisfaction and sales conversion rates in e-commerce.
-
-5. Existing Research and Implementations:  
-    E-commerce platforms like eBay and Sephora have deployed chatbots to enhance customer experiences. eBay's ShopBot assists users in finding products through natural language queries, receiving positive feedback for its ease of use and helpfulness. Sephora's Virtual Artist recommends makeup products based on user preferences, receiving acclaim for its personalized recommendations and interactive features. Both chatbots have contributed to increased user engagement, higher conversion rates, and improved customer satisfaction, showcasing the effectiveness of AI-driven virtual assistants in e-commerce.
-
-6. Challenges and Opportunities:  
-    Common challenges in developing and deploying e-commerce chatbots include:
-    - Data Privacy Concerns: Ensuring compliance with data protection regulations and safeguarding sensitive customer information.
-    - Language Understanding Limitations: Addressing the complexity of natural language queries, slang, and ambiguous intents to improve chatbot comprehension.
-    - User Acceptance: Overcoming skepticism and building trust in chatbot capabilities through effective communication and user education.
-    - Integration with Existing Systems: Seamlessly integrating chatbots with e-commerce platforms, CRM systems, and backend databases to access real-time data and provide accurate responses.
-    - Scalability and Maintenance: Scaling chatbot capabilities to handle increasing user volumes and maintaining performance over time through regular updates and improvements.
-    - User Experience Design: Designing intuitive and user-friendly interfaces that guide users through interactions and provide value-added experiences.
-    - Training Data Quality: Ensuring high-quality training data to improve chatbot accuracy and minimize errors in understanding user intents and preferences.
-    - Multilingual Support: Addressing language diversity to cater to global audiences and provide consistent support in multiple languages.
-
-    Opportunities for innovation in leveraging chatbots for e-commerce include:
-    - Personalization: Tailoring product recommendations and offers based on user preferences and browsing history.
-    - Conversational Commerce: Enabling seamless transactions and order management through natural language interactions.
-    - Visual Search: Allowing users to search for products using images, enhancing the shopping experience.
-    - Proactive Assistance: Anticipating user needs and providing proactive support and recommendations.
-    - Integration with Social Media: Leveraging chatbots on social platforms for shopping and customer support, tapping into wider audience reach.
-    - Gamification: Introducing gamified elements to engage users and incentivize purchases, fostering customer loyalty and retention.
-
-Gap Between Related Work  
-    The gap in related work lies in the absence of comprehensive studies that specifically address the integration of both classification models and language generation models (LLMs) within the context of e-commerce sales chatbots, particularly focusing on platforms like Amazon. While existing research explores the use of either classification models or LLMs in isolation, there's a dearth of literature that examines their combined application to enhance the conversational capabilities and effectiveness of sales chatbots in e-commerce settings.  
-    Summarizing, the existing literature predominantly focuses on either classification models or LLMs separately, with limited attention given to their synergistic integration within e-commerce chatbots. This gap presents an opportunity for our project to explore the potential synergies between these two approaches and demonstrate their collective impact on improving customer engagement, driving sales, and fostering loyalty within the Amazon ecosystem. Through our research and implementation efforts, we aim to bridge this gap by providing valuable insights into the integration of classification and language generation techniques for enhancing e-commerce chatbot performance.
 
 ## Solution Requirements
 - Natural Language Processing (NLP): Ability to understand and respond to customer inquiries in natural language.
@@ -119,9 +80,8 @@ GitHub will manage codebase changes while also tracking modifications in applica
 ## Dataset Information
 
 We will use the dataset from:
-- Amazon product dataset (small) - https://www.kaggle.com/datasets/promptcloud/amazon-product-dataset-2020
-- Amazon product dataset (large) - https://www.kaggle.com/datasets/piyushjain16/amazon-product-data/data
-- Amazon QA dataset - https://cseweb.ucsd.edu/~jmcauley/datasets/amazon/qa/ 
+- Amazon product dataset (extracted from meta data) - https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023 
+- Train dataset - https://github.com/amazonqa/amazonqa?tab=readme-ov-file
 
 We acknowledge and appreciate the creators and contributors of the dataset for making it available for public use.
 
