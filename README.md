@@ -161,10 +161,10 @@ We have trained 3 models:
 <img src="./question_classification/17class_image/biLSTM2000_2.png"></img>
 
    -	Small dataset with 10 classes
-<img src="./question_classification/17class_image/biLSTM500_10class.png"></img>
+<img src="./question_classification/10class_image/biLSTM500_10class.png"></img>
 
    -	Large dataset with 10 classes
-<img src="./question_classification/17class_image/biLSTM2000_10class.png"></img>
+<img src="./question_classification/10class_image/biLSTM2000_10class.png"></img>
 
 #### CNN
    -	Small dataset with 17 classes
@@ -174,10 +174,10 @@ We have trained 3 models:
 <img src="./question_classification/17class_image/CNN2000.png"></img>
 
    -	Small dataset with 10 classes
-<img src="./question_classification/17class_image/CNN500_10class.png"></img>
+<img src="./question_classification/10class_image/CNN500_10class.png"></img>
 
    -	Large dataset with 10 classes
-<img src="./question_classification/17class_image/CNN2000_10class.png"></img>
+<img src="./question_classification/10class_image/CNN2000_10class.png"></img>
 
 From comparing the result between model on 17 classes and 10 classes, we got CNN with 50 filters as our best model based on training time and minimum validation loss.
 
