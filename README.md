@@ -114,8 +114,8 @@ We acknowledge and appreciate the creators and contributors of the dataset for m
 
 ## Methodology
 ### (1) Classification model
-We have trained 3 models (biLSTM, CNN, and BERT) on different parameters.
-- For dataset, there are 17 classes including:
+#### Dataset:
+We used train dataset from amazonqa github. there are 17 classes including:
   - (1) Electronics
   - (2) Home_and_Kitchen
   - (3) Sports_and_Outdoors
@@ -133,18 +133,34 @@ We have trained 3 models (biLSTM, CNN, and BERT) on different parameters.
   - (15) Grocery_and_Gourmet_Food
   - (16) Video_Games
   - (17) Clothing_Shoes_and_Jewelry
-- For experimental design:
+#### Data Processing:
+  - the category question is converted from text to numeric
+  - the question text is cleaned by converting all text to lower case and remove some unnecessary symbol (such as "!")
+  - the data is splitted into train, validation, test set on 80%, 10%, and 10% respectively (each category has same amount of data)
+#### Models:
+We have trained 3 models:
+  - biLSTM
+  - CNN
+  - pretrained BERT (bert-base-uncased)
+#### Experimental design:
   - We trained those 3 models with small (500 questions per product category) and large dataset (2000 questions per product category) with 17 classes since we saved the model when the validation loss is improved. Therefore, we select the best model with specific parameter based on minimum validation loss.
-  - We tried to reduce the number of classes from 17 to 10 classes (class (1)-(10)) to see the trend of improvement. From comparing the result between model on 17 classes (all result figure on https://github.com/minnbanya/NLP-Project/tree/main/question_classification/17class_image) and 10 classes (all result figure on https://github.com/minnbanya/NLP-Project/tree/main/question_classification/10class_image) , we got CNN as our best model based on training time and minimum validation loss.
+  - We tried to reduce the number of classes from 17 to 10 classes (class (1)-(10)) to see the trend of improvement. From comparing the result between model on 17 classes
   - After we got the best model, we trained it with larger dataset (10000 questions per product category) in 10 classes (class (1)-(10)), 9 classes (class (1)-(9)), 7 classes (class (1)-(7)), and 5 classes (class (1)-(5)). 
-  	- On 10 classes, the model got 1.413 on validation loss and around 52.9% validation accuracy
+#### Result
+
+From comparing the result between model on 17 classes and 10 classes, we got CNN with 50 filters as our best model based on training time and minimum validation loss.
+
+
+The performance of CNN model in different number of class:
+    - On 10 classes, the model got 1.413 on validation loss and around 52.9% validation accuracy
 	- On 9 classes, the model got 1.349 on validation loss and around 54.5% validation accuracy
     - On 7 classes, the model got 1.136 on validation loss and around 59.8% validation accuracy
     - On 5 classes, the model got 0.986 on validation loss and around 63.1% validation accuracy
-  - We selected the CNN with 5 classes as our best model 
-- For evaluation, we tested selected model (CNN with 5 classes) with test set and the model got around 61.5% accuracy
+<br>
+For evaluation, we tested CNN with 50 filters and 5 classes with test set and the model got around 61.5% accuracy
 
 ![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/figures/classification_result.png)<br>
+
 
 ### (2) Language Model
 #### Dataset:
