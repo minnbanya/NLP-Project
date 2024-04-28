@@ -181,6 +181,7 @@ We have trained 3 models:
 
 From comparing the result between model on 17 classes and 10 classes, we got CNN with 50 filters as our best model based on training time and minimum validation loss.
 
+We trained CNN model with 50 filters with larger dataset (10000 questions per product category) in 10 classes , 9 classes, 7 classes , and 5 classes.
 
 The performance of CNN model in different number of class:
   - On 10 classes, the model got 1.413 on validation loss and around 52.9% validation accuracy
