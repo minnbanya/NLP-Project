@@ -257,20 +257,25 @@ The experiment involved several runs of different configurations of the GPT-2, T
 
 ## Web Application
 
-- Chat Interface:
-    - Functionality:
-        - Allows users to type messages (Type your message...), send them, and receive responses from the chatbot.
-        - Messages are displayed in a visually distinct format, with user messages on the right and bot responses on the left.
+- Technology
+    - Backend (Flask): Handles user interactions and chatbot responses.
+    - Frontend (HTML/JS): Provides a user-friendly chat interface.
+    - Use “flan_t5” model for quick response and superior result.
+    - Used model can be changed by updating the model name and its hyperparameters.
+- Functionality
+    - Allows users to type messages (Type your message...), send them, and receive responses from the chatbot.
+    - Messages are displayed in a visually distinct format, with user messages on the right and bot responses on the left.
+- Additional Sections
+    - Displays information for up to 4 products, including:
+        - Product title
+        - Price
+        - Rating
+        - Features
 
-- Additional Sections:
-    - References:
-        - Contains detailed information about the product.
-    - Product Review:
-        - Displays product review content for user reference.
-    - Product Link:
-        - Provides a link for users to access more detailed product information.
+<img src="./figures/final_webapp_01.png"> </img>
 
-![Alt Text](figures/progress_webapp.png)
+[![Demo Video]](./figures/AmazonSalesChatbotDemo.mkv)
+
 
 # Paper Summaries: 
 
