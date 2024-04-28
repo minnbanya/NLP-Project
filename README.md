@@ -192,6 +192,12 @@ For evaluation, we tested CNN with 50 filters and 5 classes with test set and th
 
 <img src="./figures/classification_result.png"></img>
 
+#### Discussion for Experimental Result on classification model
+- Performance Across Models:
+  - BERT: the model take a lot of time to train but the validation accuracy and loss is bad even though we add another layer more.
+  - biLSTM: the model with non-complex parameter is better on validation accuracy and validation than the biLSTM with complex parameter.
+  - CNN: the model take a little of time to train but the accuracy and validation loss is better than BERT and biLSTM (different parameter is not much affect).
+
 
 ### (2) Language Model
 #### Dataset:
