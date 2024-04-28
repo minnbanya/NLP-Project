@@ -191,7 +191,6 @@ The performance of CNN model in different number of class:
 For evaluation, we tested CNN with 50 filters and 5 classes with test set and the model got around 61.5% accuracy
 
 <img src="./figures/classification_result.png"></img>
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/figures/classification_result.png)<br>
 
 
 ### (2) Language Model
