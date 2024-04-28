@@ -148,6 +148,37 @@ We have trained 3 models:
   - After we got the best model, we trained it with larger dataset (10000 questions per product category) in 10 classes (class (1)-(10)), 9 classes (class (1)-(9)), 7 classes (class (1)-(7)), and 5 classes (class (1)-(5)). 
 #### Result
 
+##### BERT
+<img src="./question_classification/10class_image/Bert.png"></img>
+
+##### biLSTM
+   -	Small dataset with 17 classes
+<img src="./question_classification/17class_image/biLSTM500_1.png"></img>
+<img src="./question_classification/17class_image/biLSTM500_2.png"></img>
+
+   - Large dataset with 17 classes
+<img src="./question_classification/17class_image/biLSTM2000_1.png"></img>
+<img src="./question_classification/17class_image/biLSTM2000_2.png"></img>
+
+   -	Small dataset with 10 classes
+<img src="./question_classification/17class_image/biLSTM500_10class.png"></img>
+
+   -	Large dataset with 10 classes
+<img src="./question_classification/17class_image/biLSTM2000_10class.png"></img>
+
+#### CNN
+   -	Small dataset with 17 classes
+<img src="./question_classification/17class_image/CNN500.png"></img>
+
+   -	Large dataset with 17 classes
+<img src="./question_classification/17class_image/CNN2000.png"></img>
+
+   -	Small dataset with 10 classes
+<img src="./question_classification/17class_image/CNN500_10class.png"></img>
+
+   -	Large dataset with 10 classes
+<img src="./question_classification/17class_image/CNN2000_10class.png"></img>
+
 From comparing the result between model on 17 classes and 10 classes, we got CNN with 50 filters as our best model based on training time and minimum validation loss.
 
 
@@ -159,6 +190,7 @@ The performance of CNN model in different number of class:
 <br>
 For evaluation, we tested CNN with 50 filters and 5 classes with test set and the model got around 61.5% accuracy
 
+<img src="./figures/classification_result.png"></img>
 ![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/figures/classification_result.png)<br>
 
 
