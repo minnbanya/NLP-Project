@@ -63,8 +63,6 @@ The existing research, represented by SuperAgent and AliMe, mainly focuses on co
 - NLP
     - Classification Part 
         - MLflow will be used to save the models and see the performance of the models (select the best performance model as our best model)
-    - Classification Part
-        - MLflow will be used to save the models and see the performance of the models (select the best performance model as our best model)
     - LLM Part
         - Database will be split into vector stores
         - MLflow will be used for experiment logging and model integration
@@ -148,7 +146,7 @@ We have trained 3 models (biLSTM, CNN, and BERT) on different parameters.
 
 ![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/figures/classification_result.png)<br>
 
-### Progress on web application
+### Web Application
 
 - Chat Interface:
     - Functionality:
