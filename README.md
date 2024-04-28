@@ -82,16 +82,16 @@ GitHub will manage codebase changes while also tracking modifications in applica
 
 ## Research Questions:
 
-- Which parameters affect classification model performance?
-- What are the key factors influencing the perceived usefulness and user satisfaction with our sales chatbot?
+1. Which parameters affect classification model performance?
+2. What are the key factors influencing the perceived usefulness and user satisfaction with our sales chatbot?
 
 
 ## Hypotheses:
 
-- We hypothesize that complex parameters can lead to good performance for classification models.
-- We hypothesize that key factors to influencing user satisfaction are ability to understand queries and provide relevant answers. Moreover, web interface, and response time also affect customer satisfaction.
+1. We hypothesize that complex parameters can lead to good performance for classification models.
+2. We hypothesize that key factors to influencing user satisfaction are ability to understand queries and provide relevant answers. Moreover, web interface, and response time also affect customer satisfaction.
 
- ## Expected outcome
+ ## Expected Results
  
 - Classification model has at least 80% accuracy.
 - The chatbot can answer basic queries, and handle irrelevant questions.
