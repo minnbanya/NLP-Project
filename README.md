@@ -80,6 +80,23 @@ HTML as frontend framework for the user interface.
 MLflow for managing machine learning models including experiment tracking, and model versioning.
 GitHub will manage codebase changes while also tracking modifications in application code changes.
 
+## Research Questions:
+
+- Which parameters affect classification model performance?
+- What are the key factors influencing the perceived usefulness and user satisfaction with our sales chatbot?
+
+
+## Hypotheses:
+
+- We hypothesize that complex parameters can lead to good performance for classification models.
+- We hypothesize that key factors to influencing user satisfaction are ability to understand queries and provide relevant answers. Moreover, web interface, and response time also affect customer satisfaction.
+
+ ## Expected outcome
+ 
+- Classification model has at least 80% accuracy.
+- The chatbot can answer basic queries, and handle irrelevant questions.
+- Chatbot responses are related to user queries and can respond within a short time.
+
 ## Dataset Information
 
 We will use the dataset from:
