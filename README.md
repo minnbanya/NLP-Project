@@ -144,7 +144,7 @@ We have trained 3 models:
   - pretrained BERT (bert-base-uncased)
 #### Experimental design:
   - We trained those 3 models with small (500 questions per product category) and large dataset (2000 questions per product category) with 17 classes since we saved the model when the validation loss is improved. Therefore, we select the best model with specific parameter based on minimum validation loss.
-  - We tried to reduce the number of classes from 17 to 10 classes (class (1)-(10)) to see the trend of improvement. From comparing the result between model on 17 classes
+  - We tried to reduce the number of classes from 17 to 10 classes (class (1)-(10)) to see the trend of improvement.
   - After we got the best model, we trained it with larger dataset (10000 questions per product category) in 10 classes (class (1)-(10)), 9 classes (class (1)-(9)), 7 classes (class (1)-(7)), and 5 classes (class (1)-(5)). 
 #### Result
 
@@ -181,6 +181,7 @@ We have trained 3 models:
 
 From comparing the result between model on 17 classes and 10 classes, we got CNN with 50 filters as our best model based on training time and minimum validation loss.
 
+We trained CNN model with 50 filters with larger dataset (10000 questions per product category) in 10 classes , 9 classes, 7 classes , and 5 classes.
 
 The performance of CNN model in different number of class:
   - On 10 classes, the model got 1.413 on validation loss and around 52.9% validation accuracy
