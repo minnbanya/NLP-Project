@@ -13,74 +13,38 @@ Allow us to introduce the exceptional individuals who form the backbone of our p
 Nowadays, AI has become popular and used in various industries. AI can reduce operational costs, and increase customer satisfaction. Sales chatbot is the best choice to apply in e-commerce business since sales chatbot can assist customers immediately, and give suggestions based on customer preferences. Therefore, we are interested in developing a sales chatbot for Amazon business in order to apply knowledge from NLP class into the real world scenario.
 
 
-## Problems and Solution
-#### Problem:
+## Problems and Solutions
+#### Problems:
 - High Operational Costs: Relying solely on human sales representatives can be expensive due to the need for salaries, benefits, and training.
 - Limited Availability: Human sales representatives have limited availability, especially outside of regular business hours. Moreover, the company can miss opportunities for sales when a customer visits a website seeking assistance and no response back.
 - Delayed Responses: customers might have to wait for a human representative to become available to address their queries, leading to frustration and potential abandonment of the purchase process.
-- Lack of Data Insights: businesses may miss out on opportunities to improve their products, services, and marketing strategies.
+- Differences in human skills: Because each human salesperson has different skills and knowledge, sales stability may be affected. This variability in expertise among sales staff can lead to inconsistent sales performance, making it challenging to maintain a steady level of sales.
 
-#### Solution:
+#### Solutions:
 We should deploy a chatbot for the following reasons:
 - Cost Efficiency: Implementing a chatbot reduces operational costs associated with human sales representatives, including salaries, benefits, and training expenses.
 - 24/7 Availability: A chatbot provides round-the-clock availability, ensuring that customers receive immediate assistance even outside of regular business hours, thus preventing missed sales opportunities.
 - Instant Responses: With a chatbot, customers receive instant responses to their inquiries, eliminating delays and potential frustration during the purchase process.
-- Data Insights: Chatbots collect valuable data on customer interactions, preferences, and pain points, enabling businesses to gain insights for product improvement, service enhancement, and marketing strategy refinement.
+- Consistent Sales Performance: A chatbot ensures consistent sales interactions regardless of individual salesperson expertise, helping to maintain a steady level of sales.
 
 
-## Background and Related Work
-1. Chatbots in E-commerce:  
-    In recent years, chatbots have become integral to e-commerce, serving as 24/7 virtual sales assistants. With AI and NLP, they offer personalized support, recommend products, and streamline the sales process. By automating tasks, they boost efficiency and scalability, while gathering valuable customer insights. Chatbots not only enhance the shopping experience but also drive sales growth, making them indispensable tools for modern e-commerce businesses.
+## Related Works
+1. SuperAgent - a customer service chatbot for E-commerce websites.
+![Alt Text](figures/SuperAgent.png)
+SuperAgent is a conversational AI platform that offers chatbot solutions for businesses. It provides tools and technologies to create intelligent chatbots capable of interacting with users through natural language processing. SuperAgent's chatbots can be integrated into various platforms such as websites, mobile apps, and messaging applications to automate customer service, sales support, and other interactions. The platform typically offers features like customizable conversation flows, integration with backend systems, analytics, and reporting capabilities to enhance user experience and business efficiency.
+One of the main features of SuperAgent is AI. it utilizes LLMs so that Superagent can help users answer their customer requests. Superagent can operate in fully automatic chatbot mode outside of opening hours, or as an Agent Assist to help support staff to be more efficient.
 
-    Successful e-commerce chatbots, like Sephora's Virtual Artist and eBay's ShopBot, personalize shopping experiences by offering product recommendations and style advice. They streamline the purchasing process, increasing sales conversion rates by providing instant assistance and addressing customer queries promptly. These chatbots enhance customer engagement, foster loyalty, and contribute to revenue growth, showcasing the transformative impact of AI-driven virtual assistants in the e-commerce landscape.
+2. AliMe - a dialogue platform based on NLP that enables smart dialogue through various dialogue-enabling clients.
 
-2. Natural Language Processing (NLP):  
-    NLP techniques enable chatbots to comprehend and generate natural language responses. These include intent recognition, entity recognition, and sentiment analysis. By parsing user input, chatbots identify user intentions and extract relevant information to formulate appropriate responses. Advanced techniques like machine translation and summarization enhance language understanding and generation capabilities. NLP empowers conversational chatbots to engage users in meaningful interactions, providing personalized assistance and recommendations. This ensures a seamless and natural dialogue between users and chatbots, driving improved user experience and satisfaction.
+AliMe's comprehensive framework combines rule-based matching, retrieval, and deep learning techniques to power its dialogue system. The architecture is organized into 3 main layers to effectively handle user interactions:
 
-    NLP is pivotal for chatbots in deciphering customer queries, extracting pertinent details, and delivering precise responses. Techniques like intent recognition classify user requests into actionable categories, while entity recognition identifies key information such as product names or dates. Sentiment analysis gauges user emotions, enabling chatbots to tailor responses accordingly. These NLP capabilities empower chatbots to understand complex language nuances, adapt to varying user intents, and provide contextually relevant answers. By leveraging NLP, chatbots optimize user interactions, streamline information retrieval, and enhance overall user satisfaction by delivering accurate and timely assistance.
+- Intent Recognition: This tier discerns the underlying intentions behind user messages, categorizing them and extracting relevant attributes. These intentions drive subsequent processes, such as domain identification, making this tier crucial for initiating contextual and domain-specific actions.
+- Response Generation: For FAQs, AliMe employs knowledge graph queries or retrieval models. These models extract information from a vast pool of data, facilitating accurate answer identification while also minimizing maintenance costs through integration with traditional retrieval methods. Tasks requiring specific actions, such as booking a flight, are addressed through a combination of intention-based matching and deep reinforcement learning models. Chitchat interactions, characterized by casual conversation, leverage a hybrid approach that integrates retrieval and deep learning models. Initially, a retrieval-based model selects responses from a predefined corpus, followed by re-ranking using a Seq2Seq model for more nuanced outputs.
+- Deep Learning Practices for Intent Recognition: AliMe employs deep learning models that incorporate textual features and user behaviors to classify intentions effectively. These models leverage both traditional bag-of-words representations and word embeddings to capture contextual nuances. In developing DL-based intention classification systems, AliMe's team experimented with both multi-classification and binary classification models. While the former offers speed, it requires frequent retraining for label additions, whereas the latter, though less efficient, allows for flexible expansion without retraining.
 
-3. Classification Models:  
-    Classification models categorize data into predefined classes or categories based on input features. In the context of customer queries in e-commerce, these models analyze text inputs to classify them into relevant product categories or topics. For example, a classification model trained on past customer queries can identify whether a query pertains to electronics, clothing, or home goods. By learning patterns in the text data, the model assigns probabilities to each category, enabling it to classify new queries accurately. This application of classification models streamlines customer support processes, improves query routing, and enhances the overall user experience in e-commerce platforms.
-    - Logistic Regression:  
-        - Strengths: Simple and computationally efficient, making it easy to implement and interpret. It provides probabilistic outputs, which are useful for understanding the certainty of predictions. Works well with linearly separable data and handles binary classification tasks effectively.
-        - Limitations: Assumes a linear relationship between input features and the log-odds of the response variable. May struggle with non-linear relationships and complex datasets. Not suitable for tasks with multiple class labels without modification.
-    - Decision Trees:  
-        - Strengths: Easy to understand and visualize, making it ideal for explaining model decisions. Can handle both numerical and categorical data. Automatically selects the most informative features and can capture non-linear relationships.
-        - Limitations: Prone to overfitting, especially with deep trees and noisy data. Sensitive to small variations in the training data, which can lead to different tree structures. Decision trees are relatively unstable and may require ensemble methods like random forests to improve performance.
-    - Support Vector Machines (SVM):  
-        - Strengths: Effective in high-dimensional spaces and with datasets that have clear margins of separation. Works well with both linear and non-linear data through the use of different kernel functions. Robust against overfitting, especially in high-dimensional spaces.
-        - Limitations: Can be computationally expensive, especially with large datasets. Requires careful selection of kernel functions and tuning of hyperparameters. SVMs perform poorly with datasets that have a large number of noise points or overlapping classes.
+### Gap Between Related Work
+The existing research, represented by SuperAgent and AliMe, mainly focuses on conversational AI solutions for customer service and dialogue management across diverse contexts. However, there's a gap when it comes to applying these approaches to sales chatbots, which is the primary focus of our project. Unlike the broader focus on customer support and general dialogue, our project centers on developing a chatbot tailored specifically for driving sales on Amazon platforms. This involves utilizing classification models and Large Language Models (LLMs) to improve the chatbot's ability to understand user intents, offer personalized product recommendations, and ultimately boost sales. Thus, the gap lies in adapting advanced AI techniques to the sales domain, particularly for E-commerce businesses aiming to enhance their sales processes and engage customers effectively through conversational interfaces.
 
-4. Language Generation Models (LLMs):  
-    Language generation models like GPT-3 utilize transformer architectures to produce human-like text based on input prompts. Trained on vast datasets, GPT-3 excels in generating coherent and contextually relevant responses across diverse topics. With 175 billion parameters, it captures intricate language patterns, demonstrating fluency and creativity. Its versatility enables applications in content generation, chatbots, translation, and code synthesis. GPT-3's remarkable ability to mimic human writing style and produce high-quality text marks a significant advancement in natural language processing.
-
-    Advancements in Language Generation Models (LLMs) like GPT-3 enhance chatbots' conversational capabilities significantly. LLMs can generate detailed product descriptions by analyzing various sources, personalize recommendations based on user preferences, and provide accurate responses to customer inquiries. By understanding context and synthesizing information, LLM-powered chatbots offer more engaging and tailored interactions, driving improved customer satisfaction and sales conversion rates in e-commerce.
-
-5. Existing Research and Implementations:  
-    E-commerce platforms like eBay and Sephora have deployed chatbots to enhance customer experiences. eBay's ShopBot assists users in finding products through natural language queries, receiving positive feedback for its ease of use and helpfulness. Sephora's Virtual Artist recommends makeup products based on user preferences, receiving acclaim for its personalized recommendations and interactive features. Both chatbots have contributed to increased user engagement, higher conversion rates, and improved customer satisfaction, showcasing the effectiveness of AI-driven virtual assistants in e-commerce.
-
-6. Challenges and Opportunities:  
-    Common challenges in developing and deploying e-commerce chatbots include:
-    - Data Privacy Concerns: Ensuring compliance with data protection regulations and safeguarding sensitive customer information.
-    - Language Understanding Limitations: Addressing the complexity of natural language queries, slang, and ambiguous intents to improve chatbot comprehension.
-    - User Acceptance: Overcoming skepticism and building trust in chatbot capabilities through effective communication and user education.
-    - Integration with Existing Systems: Seamlessly integrating chatbots with e-commerce platforms, CRM systems, and backend databases to access real-time data and provide accurate responses.
-    - Scalability and Maintenance: Scaling chatbot capabilities to handle increasing user volumes and maintaining performance over time through regular updates and improvements.
-    - User Experience Design: Designing intuitive and user-friendly interfaces that guide users through interactions and provide value-added experiences.
-    - Training Data Quality: Ensuring high-quality training data to improve chatbot accuracy and minimize errors in understanding user intents and preferences.
-    - Multilingual Support: Addressing language diversity to cater to global audiences and provide consistent support in multiple languages.
-
-    Opportunities for innovation in leveraging chatbots for e-commerce include:
-    - Personalization: Tailoring product recommendations and offers based on user preferences and browsing history.
-    - Conversational Commerce: Enabling seamless transactions and order management through natural language interactions.
-    - Visual Search: Allowing users to search for products using images, enhancing the shopping experience.
-    - Proactive Assistance: Anticipating user needs and providing proactive support and recommendations.
-    - Integration with Social Media: Leveraging chatbots on social platforms for shopping and customer support, tapping into wider audience reach.
-    - Gamification: Introducing gamified elements to engage users and incentivize purchases, fostering customer loyalty and retention.
-
-Gap Between Related Work  
-    The gap in related work lies in the absence of comprehensive studies that specifically address the integration of both classification models and language generation models (LLMs) within the context of e-commerce sales chatbots, particularly focusing on platforms like Amazon. While existing research explores the use of either classification models or LLMs in isolation, there's a dearth of literature that examines their combined application to enhance the conversational capabilities and effectiveness of sales chatbots in e-commerce settings.  
-    Summarizing, the existing literature predominantly focuses on either classification models or LLMs separately, with limited attention given to their synergistic integration within e-commerce chatbots. This gap presents an opportunity for our project to explore the potential synergies between these two approaches and demonstrate their collective impact on improving customer engagement, driving sales, and fostering loyalty within the Amazon ecosystem. Through our research and implementation efforts, we aim to bridge this gap by providing valuable insights into the integration of classification and language generation techniques for enhancing e-commerce chatbot performance.
 
 ## Solution Requirements
 - Natural Language Processing (NLP): Ability to understand and respond to customer inquiries in natural language.
@@ -99,8 +63,6 @@ Gap Between Related Work
 - NLP
     - Classification Part 
         - MLflow will be used to save the models and see the performance of the models (select the best performance model as our best model)
-    - Classification Part
-        - MLflow will be used to save the models and see the performance of the models (select the best performance model as our best model)
     - LLM Part
         - Database will be split into vector stores
         - MLflow will be used for experiment logging and model integration
@@ -115,6 +77,23 @@ Gap Between Related Work
 HTML as frontend framework for the user interface.
 MLflow for managing machine learning models including experiment tracking, and model versioning.
 GitHub will manage codebase changes while also tracking modifications in application code changes.
+
+## Research Questions:
+
+1. Which parameters affect classification model performance?
+2. What are the key factors influencing the perceived usefulness and user satisfaction with our sales chatbot?
+
+
+## Hypotheses:
+
+1. We hypothesize that complex parameters can lead to good performance for classification models.
+2. We hypothesize that key factors to influencing user satisfaction are ability to understand queries and provide relevant answers. Moreover, web interface, and response time also affect customer satisfaction.
+
+ ## Expected Results
+ 
+- Classification model has at least 80% accuracy.
+- The chatbot can answer basic queries, and handle irrelevant questions.
+- Chatbot responses are related to user queries and can respond within a short time.
 
 ## Dataset Information
 
@@ -133,64 +112,97 @@ We acknowledge and appreciate the creators and contributors of the dataset for m
 - Experiment Testing - Thamakorn and Kyi
 - Reporting	and Others - Thamakorn and Kyi
 
-## Progress Update
-### Progress on classification model
-- Categorize into 17 classes
-  - Toys_and_Games
-  - Health_and_Personal_Care
-  - Cell_Phones_and_Accessories
-  - Home_and_Kitchen
-  - Musical_Instruments
-  - Baby, Sports_and_Outdoors
-  - Patio_Lawn_and_Garden
-  - Video_Games
-  - Pet_Supplies
-  - Tools_and_Home_Improvement
-  - Beauty
-  - Electronics
-  - Grocery_and_Gourmet_Food
-  - Automotive
-  - Office_Products
-  - Clothing_Shoes_and_Jewelry
-- We have trained 2 models (biLSTM and CNN) on different parameter with small (500 questions per product category) and large dataset (1000 questions per product category). Moreover, we saved the model when the validation loss is improve. Therefore, we select the best model with specific parameter based on minimum validation loss
+## Methodology
+### (1) Classification model
+We have trained 3 models (biLSTM, CNN, and BERT) on different parameters.
+- For dataset, there are 17 classes including:
+  - (1) Electronics
+  - (2) Home_and_Kitchen
+  - (3) Sports_and_Outdoors
+  - (4) Tools_and_Home_Improvement
+  - (5) Health_and_Personal_Care
+  - (6) Automotive
+  - (7) Cell_Phones_and_Accessories
+  - (8) Patio_Lawn_and_Garden
+  - (9) Toys_and_Games                 
+  - (10) Office_Products
+  - (11) Beauty
+  - (12) Pet_Supplies
+  - (13) Baby
+  - (14) Musical_Instruments
+  - (15) Grocery_and_Gourmet_Food
+  - (16) Video_Games
+  - (17) Clothing_Shoes_and_Jewelry
+- For experimental design:
+  - We trained those 3 models with small (500 questions per product category) and large dataset (2000 questions per product category) with 17 classes since we saved the model when the validation loss is improved. Therefore, we select the best model with specific parameter based on minimum validation loss.
+  - We tried to reduce the number of classes from 17 to 10 classes (class (1)-(10)) to see the trend of improvement. From comparing the result between model on 17 classes (all result figure on https://github.com/minnbanya/NLP-Project/tree/main/question_classification/17class_image) and 10 classes (all result figure on https://github.com/minnbanya/NLP-Project/tree/main/question_classification/10class_image) , we got CNN as our best model based on training time and minimum validation loss.
+  - After we got the best model, we trained it with larger dataset (10000 questions per product category) in 10 classes (class (1)-(10)), 9 classes (class (1)-(9)), 7 classes (class (1)-(7)), and 5 classes (class (1)-(5)). 
+  	- On 10 classes, the model got 1.413 on validation loss and around 52.9% validation accuracy
+	- On 9 classes, the model got 1.349 on validation loss and around 54.5% validation accuracy
+    - On 7 classes, the model got 1.136 on validation loss and around 59.8% validation accuracy
+    - On 5 classes, the model got 0.986 on validation loss and around 63.1% validation accuracy
+  - We selected the CNN with 5 classes as our best model 
+- For evaluation, we tested selected model (CNN with 5 classes) with test set and the model got around 61.5% accuracy
 
-Github link for our experiment: https://github.com/Noppawee-Teeraratchanon/NLP_Project_Question_Classification_By_ProductType.git
+![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/figures/classification_result.png)<br>
 
-#### biLSTM with small dataset
+### (2) Language Model
+#### Dataset:
+The dataset for this project comprises product information extracted from the metadata files available at Hugging Face Datasets hosted by McAuley Lab. This dataset includes comprehensive product details which serve as a rich source for retrieval-based question answering systems.
 
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/biLSTM500_1.png)
+#### Data Processing:
+The data was downloaded using the generate_meta.py script, designed to fetch and preprocess metadata for further use. The script segments data into three subsets containing 100, 500, and 1000 products per category. Due to hardware limitations, only the subset with 100 products per category was utilized for creating vector stores. These vector stores facilitate efficient retrieval by converting textual data into numerical embeddings that can be quickly accessed during the query phase.
 
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/biLSTM500_2.png)
+#### Vector Stores Creation:
+The processed data was stored in vector stores using the FAISS library to facilitate efficient similarity searches. This setup is crucial for the Retrieval-Augmented Generation (RAG) component of the project, which retrieves relevant product information to answer queries.
 
+#### Pretrained Models:
+For the language generation component, the project experimented with several pretrained models to identify the best performer for generating contextually relevant and coherent responses. The models tested include:
 
+T5 Model: fastchat-t5-3b-v1.0 from Hugging Face
+GPT-2 Model: GPT2-span-head-few-shot-k-16-finetuned-squad-seed from Hugging Face
+FLAN T5 Models: Base and large versions from Google’s FLAN T5 aimed to leverage few-shot learning capabilities for better generalization.
+Experimentation and Logging:
+Experiments were managed using the mlflow_testing.py script with configurations logged via MLflow to track different settings and outcomes. This setup allowed testing various combinations of temperature settings and repetition penalties to fine-tune the model's output for more precise and diverse text generation.
 
-#### biLSTM with large dataset
+#### Test Dataset:
+The test dataset comprised question-answer pairs from the Amazon QA dataset, available at GitHub - Amazon QA. The generate_qa.py script was employed to process this dataset into a suitable format for testing.
 
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/biLSTM1000_1.png)
+#### Evaluation Metric:
+The primary evaluation metric used was the ROUGE-1 F-measure. This metric is particularly suited for evaluating NLP chatbot performance in LangChain projects because it focuses on the overlap of unigrams between the generated responses and reference answers. The F-measure, which balances precision and recall, is crucial for assessing how well the model captures relevant content (recall) while avoiding superfluous generation (precision). This balance is key in chatbot applications where accurate and succinct answers are valued.
 
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/biLSTM1000_2.png)
+### Result
+MLflow experiment logs and charts  
+<img src="./figures/mlflow1.png"></img>  
+<img src="./figures/mlflow2.png"> </img>  
 
+### Discussion for Experimental Result
 
-#### CNN with small dataset
+#### Overview of Results:
+The experiment involved several runs of different configurations of the GPT-2, T5, and FLAN T5 models with varying temperature (temp) and repetition penalty (rep) parameters. The evaluation metrics focused on ROUGE-1 scores (Precision, Recall, F-measure), which provided insights into the effectiveness of each model in generating relevant responses that match the reference answers.
 
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/CNN500.png)
+#### Results Analysis:
+- Performance Across Models:  
+    - GPT-2 configurations showed moderate effectiveness. For example, GPT-2 with temp=0.5 and rep=1.2 resulted in balanced precision and recall, but the overall f-measure was not optimal compared to other configurations.
+    - T5 configurations varied widely, indicating that the choice of temperature and repetition penalty critically affects performance. Higher repetition penalties generally decreased performance, potentially due to overly constrained output generation.
+    - FLAN T5 models, especially the large variant, performed significantly better in terms of precision, with some configurations achieving perfect precision scores. However, this often came at the cost of recall, indicating a trade-off where the model might be generating very conservative outputs that align closely with the input but miss broader context or additional relevant information.
+- Specific Insights:
+    - High temperature values typically resulted in higher recall but lower precision, suggesting more creative but less accurate responses.
+    - High repetition penalties generally led to lower overall performance, indicating that overly penalizing repetition might restrict the model's ability to generate coherent and contextually relevant text.
+    - The FLAN T5 Large model consistently performed better in terms of precision, possibly due to its larger size and capacity to understand and generate more contextually appropriate responses.
+- Hypothesis Validation:
+    - The hypothesis that adjusting temperature and repetition penalty can optimize the trade-off between precision and recall is partially supported. However, results suggest that while tweaking these parameters can influence performance, the optimal settings highly depend on the specific model architecture and the size of the model.
 
+- Limitations:
+    - Computational Power: Limited hardware capabilities constrained the use of larger datasets and more computationally intensive models. Only the 100 product subset could be used due to these limitations.
+    - Model Capacity: The larger models like FLAN T5 Large, which showed promising results, are computationally expensive, limiting their practicality for real-time applications without significant hardware resources.
+    - Balancing Metrics: Achieving high precision often resulted in lower recall and vice versa. Future work could explore ensemble methods or advanced decoding techniques to balance these metrics better.
+    - Generalizability: Due to the specific nature of the dataset (Amazon product questions), the models' performance on other types of data or in more general conversational contexts remains untested.
+- Insights:
+    - Experimentation with various models and hyperparameters showcased the nuanced impact of model configuration on performance. Understanding these dynamics can aid in fine-tuning retrieval-augmented generation systems for specific applications.
+    - The superior precision of larger models suggests a potential direction for further research, where model scaling could be explored alongside efficient computational strategies.
 
-#### CNN with large dataset
-
-![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/question_classification/question_classification_mlflow_image/CNN1000.png)
-
-
-
-
-From the experiment, we can conclude that both models are better when the dataset is larger. For biLSTM, when we increase the epoch, hidden dimension, and number of layers, the model is worse. For CNN, we can conclude that when the number of filters and epoch increase, the model is better
-<br>
-
-Based on minimum validation loss, CNN with 30 epochs, 150 number of filters is our best model and we will use it to train with a larger dataset (2000 questions per category)
-
-- We have tested model with test set and the model got around 44% accuracy
-
-### Progress on web application
+## Web Application
 
 - Chat Interface:
     - Functionality:
