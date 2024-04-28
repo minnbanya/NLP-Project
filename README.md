@@ -275,7 +275,7 @@ The experiment involved several runs of different configurations of the GPT-2, T
 
 <img src="./figures/final_webapp_01.png"> </img>
 
-[![Demo Video]](https://youtu.be/vIdyQm7oAWg)
+[![Demo Video](https://img.youtube.com/vi/vIdyQm7oAWg/default.jpg)](https://youtu.be/vIdyQm7oAWg)
 
 
 # Paper Summaries: 
