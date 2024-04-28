@@ -113,7 +113,7 @@ We acknowledge and appreciate the creators and contributors of the dataset for m
 - Reporting	and Others - Thamakorn and Kyi
 
 ## Methodology
-### Classification model
+### (1) Classification model
 We have trained 3 models (biLSTM, CNN, and BERT) on different parameters.
 - For dataset, there are 17 classes including:
   - (1) Electronics
@@ -146,7 +146,63 @@ We have trained 3 models (biLSTM, CNN, and BERT) on different parameters.
 
 ![Alt Text](https://github.com/minnbanya/NLP-Project/blob/main/figures/classification_result.png)<br>
 
-### Web Application
+### (2) Language Model
+#### Dataset:
+The dataset for this project comprises product information extracted from the metadata files available at Hugging Face Datasets hosted by McAuley Lab. This dataset includes comprehensive product details which serve as a rich source for retrieval-based question answering systems.
+
+#### Data Processing:
+The data was downloaded using the generate_meta.py script, designed to fetch and preprocess metadata for further use. The script segments data into three subsets containing 100, 500, and 1000 products per category. Due to hardware limitations, only the subset with 100 products per category was utilized for creating vector stores. These vector stores facilitate efficient retrieval by converting textual data into numerical embeddings that can be quickly accessed during the query phase.
+
+#### Vector Stores Creation:
+The processed data was stored in vector stores using the FAISS library to facilitate efficient similarity searches. This setup is crucial for the Retrieval-Augmented Generation (RAG) component of the project, which retrieves relevant product information to answer queries.
+
+#### Pretrained Models:
+For the language generation component, the project experimented with several pretrained models to identify the best performer for generating contextually relevant and coherent responses. The models tested include:
+
+T5 Model: fastchat-t5-3b-v1.0 from Hugging Face
+GPT-2 Model: GPT2-span-head-few-shot-k-16-finetuned-squad-seed from Hugging Face
+FLAN T5 Models: Base and large versions from Google’s FLAN T5 aimed to leverage few-shot learning capabilities for better generalization.
+Experimentation and Logging:
+Experiments were managed using the mlflow_testing.py script with configurations logged via MLflow to track different settings and outcomes. This setup allowed testing various combinations of temperature settings and repetition penalties to fine-tune the model's output for more precise and diverse text generation.
+
+#### Test Dataset:
+The test dataset comprised question-answer pairs from the Amazon QA dataset, available at GitHub - Amazon QA. The generate_qa.py script was employed to process this dataset into a suitable format for testing.
+
+#### Evaluation Metric:
+The primary evaluation metric used was the ROUGE-1 F-measure. This metric is particularly suited for evaluating NLP chatbot performance in LangChain projects because it focuses on the overlap of unigrams between the generated responses and reference answers. The F-measure, which balances precision and recall, is crucial for assessing how well the model captures relevant content (recall) while avoiding superfluous generation (precision). This balance is key in chatbot applications where accurate and succinct answers are valued.
+
+### Result
+MLflow experiment logs and charts  
+<img src="./figures/mlflow1.png"></img>  
+<img src="./figures/mlflow2.png"> </img>  
+
+### Discussion for Experimental Result
+
+#### Overview of Results:
+The experiment involved several runs of different configurations of the GPT-2, T5, and FLAN T5 models with varying temperature (temp) and repetition penalty (rep) parameters. The evaluation metrics focused on ROUGE-1 scores (Precision, Recall, F-measure), which provided insights into the effectiveness of each model in generating relevant responses that match the reference answers.
+
+#### Results Analysis:
+- Performance Across Models:  
+    - GPT-2 configurations showed moderate effectiveness. For example, GPT-2 with temp=0.5 and rep=1.2 resulted in balanced precision and recall, but the overall f-measure was not optimal compared to other configurations.
+    - T5 configurations varied widely, indicating that the choice of temperature and repetition penalty critically affects performance. Higher repetition penalties generally decreased performance, potentially due to overly constrained output generation.
+    - FLAN T5 models, especially the large variant, performed significantly better in terms of precision, with some configurations achieving perfect precision scores. However, this often came at the cost of recall, indicating a trade-off where the model might be generating very conservative outputs that align closely with the input but miss broader context or additional relevant information.
+- Specific Insights:
+    - High temperature values typically resulted in higher recall but lower precision, suggesting more creative but less accurate responses.
+    - High repetition penalties generally led to lower overall performance, indicating that overly penalizing repetition might restrict the model's ability to generate coherent and contextually relevant text.
+    - The FLAN T5 Large model consistently performed better in terms of precision, possibly due to its larger size and capacity to understand and generate more contextually appropriate responses.
+- Hypothesis Validation:
+    - The hypothesis that adjusting temperature and repetition penalty can optimize the trade-off between precision and recall is partially supported. However, results suggest that while tweaking these parameters can influence performance, the optimal settings highly depend on the specific model architecture and the size of the model.
+
+- Limitations:
+    - Computational Power: Limited hardware capabilities constrained the use of larger datasets and more computationally intensive models. Only the 100 product subset could be used due to these limitations.
+    - Model Capacity: The larger models like FLAN T5 Large, which showed promising results, are computationally expensive, limiting their practicality for real-time applications without significant hardware resources.
+    - Balancing Metrics: Achieving high precision often resulted in lower recall and vice versa. Future work could explore ensemble methods or advanced decoding techniques to balance these metrics better.
+    - Generalizability: Due to the specific nature of the dataset (Amazon product questions), the models' performance on other types of data or in more general conversational contexts remains untested.
+- Insights:
+    - Experimentation with various models and hyperparameters showcased the nuanced impact of model configuration on performance. Understanding these dynamics can aid in fine-tuning retrieval-augmented generation systems for specific applications.
+    - The superior precision of larger models suggests a potential direction for further research, where model scaling could be explored alongside efficient computational strategies.
+
+## Web Application
 
 - Chat Interface:
     - Functionality:
