@@ -152,10 +152,10 @@ From comparing the result between model on 17 classes and 10 classes, we got CNN
 
 
 The performance of CNN model in different number of class:
-    - On 10 classes, the model got 1.413 on validation loss and around 52.9% validation accuracy
-	- On 9 classes, the model got 1.349 on validation loss and around 54.5% validation accuracy
-    - On 7 classes, the model got 1.136 on validation loss and around 59.8% validation accuracy
-    - On 5 classes, the model got 0.986 on validation loss and around 63.1% validation accuracy
+  - On 10 classes, the model got 1.413 on validation loss and around 52.9% validation accuracy
+  - On 9 classes, the model got 1.349 on validation loss and around 54.5% validation accuracy
+  - On 7 classes, the model got 1.136 on validation loss and around 59.8% validation accuracy
+  - On 5 classes, the model got 0.986 on validation loss and around 63.1% validation accuracy
 <br>
 For evaluation, we tested CNN with 50 filters and 5 classes with test set and the model got around 61.5% accuracy
 
